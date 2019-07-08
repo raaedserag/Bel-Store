@@ -156,6 +156,13 @@ SET  name = @name, quantity = @quantity, vendor = @vendor, barcode = @barcode, p
 WHERE id = @id
 GO;
 
+-- Get Receipt Data
+CREATE PROCEDURE Get_receipt_data @receipt_id int
+AS
+SELECT * 
+FROM Receipts_Data
+WHERE receipt_id = @receipt_id 
+GO;
 -- Get Receipt Products
 CREATE PROCEDURE Get_receipt_products @receipt_id int
 AS
@@ -175,6 +182,8 @@ EXEC Add_new_product @name = "تكييف 4 حصان", @quantity = 4 , @vendor = 
 -- Updating Existing Product
 EXEC Update_product @id = 4, @name = "تكييف 5 حصان", @quantity = 4 , @vendor = "Union Air" , @barcode = "12345678", @price = 12563.523, @category_id = 4
 
+-- Get Some Receipt Data by id
+EXEC Get_receipt_data @receipt_id = 1
 -- Get Some Receipt Products by id
 EXEC Get_receipt_products @receipt_id = 1
 
