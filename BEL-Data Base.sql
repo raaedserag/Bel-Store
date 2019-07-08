@@ -94,6 +94,9 @@ SELECT * FROM Products
 -- Receipts
 SELECT * FROM Receipts
 
+-- ReciptsProducts
+SELECT * FROM ReceiptsProducts
+
 -------------------------------     Creating VIEWS        ----------------------------------------------------
 
 
@@ -135,6 +138,7 @@ SELECT * FROM Receipts_Products
 
 -------------------------------    CREATING PROCEDURES        ----------------------------------------------------
 
+------------ FOR CATEGORIES --------------------------------
 
 -- Create New Category
 CREATE PROCEDURE Add_Category @new_category nvarchar(100)
@@ -142,6 +146,30 @@ AS
 INSERT INTO Categories(name) VALUES (@new_category)
 GO;
 
+-- Update Existing Category
+CREATE PROCEDURE Update_category @id int, @new_name nvarchar(100)
+AS
+UPDATE Categories
+SET name = @new_name
+WHERE id = @id
+GO;
+
+-- Delete Some Category
+CREATE PROCEDURE Delete_category @id int
+AS
+DELETE FROM Categories WHERE id = @id;
+GO;
+
+-- Search Categories BY name
+CREATE PROCEDURE Search_categories @name nvarchar(100)
+AS
+SELECT * 
+FROM Categories
+WHERE name LIKE '%' + @name + '%'
+GO;
+-------------------------------------------------------------
+
+------------ FOR Products --------------------------------
 -- Create New Product
 CREATE PROCEDURE Add_new_product @name nvarchar(100), @quantity int, @vendor nvarchar(100), @barcode varchar(50), @price float, @category_id int
 AS
@@ -156,25 +184,56 @@ SET  name = @name, quantity = @quantity, vendor = @vendor, barcode = @barcode, p
 WHERE id = @id
 GO;
 
+-- Delete Some Product
+CREATE PROCEDURE Delete_product @id int
+AS
+DELETE FROM Products WHERE id = @id;
+GO;
+
+-- Search Products BY name
+CREATE PROCEDURE Search_products_name @name nvarchar(100)
+AS
+SELECT * 
+FROM Products
+WHERE name LIKE '%' + @name + '%'
+GO;
+
+-- Search Products BY Barcode
+CREATE PROCEDURE Search_products_barcode @barcode varchar(50)
+AS
+SELECT * 
+FROM Products
+WHERE barcode = @barcode
+GO;
+
+-------------------------------------------------------------
+
 -- Get Receipt Data
 CREATE PROCEDURE Get_receipt_data @receipt_id int
 AS
 SELECT * 
 FROM Receipts_Data
-WHERE receipt_id = @receipt_id 
-GO;
--- Get Receipt Products
-CREATE PROCEDURE Get_receipt_products @receipt_id int
-AS
-SELECT category, name, vendor, price, quantity, (quantity*price) as total_price
-FROM Receipts_Products
-WHERE receipt_id = @receipt_id
+LEFT JOIN Receipts_Products ON Receipts_Data.receipt_id = Receipts_Products.receipt_id
+WHERE Receipts_Data.receipt_id = @receipt_id 
 GO;
 
 ---	----------------------------    EXECUTING PROCEDURES        ----------------------------------------------------
+------------ FOR CATEGORIES --------------------------------
 
 -- Create New Category
-EXEC Add_Category @new_category = "تكييف"
+EXEC Add_Category @new_category = "ggg"
+
+-- Update Existing Category
+EXEC Update_category @id = 1, @new_name = "غسالات"
+
+-- Delete Some Category
+EXEC Delete_category @id = 2
+
+-- Search Categories BY name
+EXEC Search_categories @name = "غس"
+-------------------------------------------------------------
+
+------------ FOR Products  --------------------------------
 
 -- Create New Product
 EXEC Add_new_product @name = "تكييف 4 حصان", @quantity = 4 , @vendor = "Union Air" , @barcode = "12345678", @price = 12563.523, @category_id = 4
@@ -182,10 +241,16 @@ EXEC Add_new_product @name = "تكييف 4 حصان", @quantity = 4 , @vendor = 
 -- Updating Existing Product
 EXEC Update_product @id = 4, @name = "تكييف 5 حصان", @quantity = 4 , @vendor = "Union Air" , @barcode = "12345678", @price = 12563.523, @category_id = 4
 
+-- Delete Some Product with ID
+EXEC Delete_product @id = 1
+
+-- Search Product by name
+EXEC Search_products_name @name = "و"
+
+-- Search Product by Barcode
+EXEC Search_products_barcode @barcode = 1000
+-------------------------------------------------------------
 -- Get Some Receipt Data by id
 EXEC Get_receipt_data @receipt_id = 1
--- Get Some Receipt Products by id
-EXEC Get_receipt_products @receipt_id = 1
-
 
 
