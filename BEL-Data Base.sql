@@ -1,4 +1,4 @@
--- Table: Categories
+﻿-- Table: Categories
 CREATE TABLE Categories (
 	id int IDENTITY(1,1) PRIMARY KEY,
 	name nvarchar(100) UNIQUE
