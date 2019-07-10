@@ -16,5 +16,15 @@ namespace Belal.Controller
         {
             InitializeComponent();
         }
+
+        private void Receipts_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

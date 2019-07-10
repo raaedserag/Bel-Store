@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Belal.Controller;
 
 namespace Belal
 {
@@ -16,7 +17,7 @@ namespace Belal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FRM_Main());
+            Application.Run(new Receipts());
         }
     }
 }
