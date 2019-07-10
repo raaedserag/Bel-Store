@@ -45,34 +45,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Customer.cs">
+    <Compile Include="Controller\Customer\FRMAddcustomerr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="Controller\Customer\FRMAddcustomerr.Designer.cs">
+      <DependentUpon>FRMAddcustomerr.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\Main.cs">
+    <Compile Include="Controller\Invoice\FRM_Receipts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\Main.Designer.cs">
+    <Compile Include="Controller\Invoice\FRM_Receipts.Designer.cs">
+      <DependentUpon>FRM_Receipts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Main\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Main\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\Receipts.cs">
+    <Compile Include="Controller\Customer\FRMSearchOfCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\Receipts.Designer.cs">
-      <DependentUpon>Receipts.cs</DependentUpon>
+    <Compile Include="Controller\Customer\FRMSearchOfCustomer.Designer.cs">
+      <DependentUpon>FRMSearchOfCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Invoice\FRMSearchOfReceipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Invoice\FRMSearchOfReceipts.Designer.cs">
+      <DependentUpon>FRMSearchOfReceipts.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controller\Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="Controller\Customer\FRMAddcustomerr.resx">
+      <DependentUpon>FRMAddcustomerr.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\Main.resx">
+    <EmbeddedResource Include="Controller\Invoice\FRM_Receipts.resx">
+      <DependentUpon>FRM_Receipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Main\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\Receipts.resx">
-      <DependentUpon>Receipts.cs</DependentUpon>
+    <EmbeddedResource Include="Controller\Customer\FRMSearchOfCustomer.resx">
+      <DependentUpon>FRMSearchOfCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Invoice\FRMSearchOfReceipts.resx">
+      <DependentUpon>FRMSearchOfReceipts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

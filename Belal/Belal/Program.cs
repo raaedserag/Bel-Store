@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Belal.Controller;
+using System;
 using System.Windows.Forms;
-using Belal.Controller;
+using Belal.Controller.Invoice;
 
 namespace Belal
 {
@@ -14,7 +15,7 @@ namespace Belal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Customer());
+            Application.Run(new FRM_Receipts());
         }
     }
 }

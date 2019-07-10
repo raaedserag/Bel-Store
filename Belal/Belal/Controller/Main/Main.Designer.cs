@@ -90,14 +90,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(484, 442);
+            this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.MinimumSize = new System.Drawing.Size(500, 39);
+            this.MaximumSize = new System.Drawing.Size(500, 500);
+            this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "FRM_Main";
             this.Padding = new System.Windows.Forms.Padding(50, 0, 0, 100);
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
