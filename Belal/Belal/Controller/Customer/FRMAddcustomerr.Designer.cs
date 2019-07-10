@@ -1,6 +1,6 @@
 ﻿namespace Belal.Controller
 {
-    partial class Customer
+    public partial class Customer
     {
         /// <summary>
         /// Required designer variable.

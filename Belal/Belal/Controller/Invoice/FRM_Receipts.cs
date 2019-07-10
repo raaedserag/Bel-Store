@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Belal.Controller
+namespace Belal.Controller.Invoice
 {
-    public partial class Receipts : Form
+    public partial class FRM_Receipts : Form
     {
-        public Receipts()
+        public FRM_Receipts()
         {
             InitializeComponent();
-        }
-
-        private void Receipts_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
