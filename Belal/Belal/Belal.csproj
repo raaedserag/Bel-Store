@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7C72D29-9589-4BA4-8E0E-6EC9AEAA0841}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Belal</RootNamespace>
+    <AssemblyName>Belal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\ادارة فواتير\FRM_NewReciepts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\FRM_NewReciepts.Designer.cs">
+      <DependentUpon>FRM_NewReciepts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\FRM_Receipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\FRM_Receipts.Designer.cs">
+      <DependentUpon>FRM_Receipts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\FRMSearchOfReceipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\FRMSearchOfReceipts.Designer.cs">
+      <DependentUpon>FRMSearchOfReceipts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة الاصناف\اداره الاصناف.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة الاصناف\اداره الاصناف.Designer.cs">
+      <DependentUpon>اداره الاصناف.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة العملاء\اداره العملاء.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة العملاء\اداره العملاء.Designer.cs">
+      <DependentUpon>اداره العملاء.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\اداره المنتجات.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\اداره المنتجات.Designer.cs">
+      <DependentUpon>اداره المنتجات.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\اضافة منتج جديد.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\اضافة منتج جديد.Designer.cs">
+      <DependentUpon>اضافة منتج جديد.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\تعديل _حذف منتج.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\تعديل _حذف منتج.Designer.cs">
+      <DependentUpon>تعديل _حذف منتج.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\فاتورة شراء.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\فاتورة شراء.Designer.cs">
+      <DependentUpon>فاتورة شراء.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\ShowReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\ShowReceipt.Designer.cs">
+      <DependentUpon>ShowReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\اداره فواتير.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\اداره فواتير.Designer.cs">
+      <DependentUpon>اداره فواتير.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\الرئسيه\الرئسية.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\الرئسيه\الرئسية.Designer.cs">
+      <DependentUpon>الرئسية.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\فاتورة سابقة.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\فاتورة سابقة.Designer.cs">
+      <DependentUpon>فاتورة سابقة.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controller\ادارة فواتير\FRM_NewReciepts.resx">
+      <DependentUpon>FRM_NewReciepts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة فواتير\FRM_Receipts.resx">
+      <DependentUpon>FRM_Receipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة فواتير\FRMSearchOfReceipts.resx">
+      <DependentUpon>FRMSearchOfReceipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة الاصناف\اداره الاصناف.resx">
+      <DependentUpon>اداره الاصناف.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة العملاء\اداره العملاء.resx">
+      <DependentUpon>اداره العملاء.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة المنتجات\اداره المنتجات.resx">
+      <DependentUpon>اداره المنتجات.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة المنتجات\اضافة منتج جديد.resx">
+      <DependentUpon>اضافة منتج جديد.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة المنتجات\تعديل _حذف منتج.resx">
+      <DependentUpon>تعديل _حذف منتج.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة المنتجات\فاتورة شراء.resx">
+      <DependentUpon>فاتورة شراء.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة فواتير\ShowReceipt.resx">
+      <DependentUpon>ShowReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة فواتير\اداره فواتير.resx">
+      <DependentUpon>اداره فواتير.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\الرئسيه\الرئسية.resx">
+      <DependentUpon>الرئسية.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة فواتير\فاتورة سابقة.resx">
+      <DependentUpon>فاتورة سابقة.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
