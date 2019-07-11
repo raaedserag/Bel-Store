@@ -1,7 +1,8 @@
-﻿using Belal.Controller;
+﻿using Belal.Controller.ادارة_فواتير;
 using System;
 using System.Windows.Forms;
-using Belal.Controller.Invoice;
+using Belal.Controller;
+using Belal.Controller.ادارة_المنتجات;
 
 namespace Belal
 {
@@ -15,11 +16,10 @@ namespace Belal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new Receipts());
-=======
-            Application.Run(new FRM_Receipts());
->>>>>>> 9543968ab4fbc4a6fe84765f19b24b43730b5705
+
+
+            Application.Run(new فاتورة_سابقة());
+
         }
     }
 }

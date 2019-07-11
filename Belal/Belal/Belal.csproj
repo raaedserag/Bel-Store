@@ -51,6 +51,18 @@
     <Compile Include="Controller\Customer\FRMAddcustomerr.Designer.cs">
       <DependentUpon>FRMAddcustomerr.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controller\Return\FRM_Returns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Return\FRM_Returns.Designer.cs">
+      <DependentUpon>FRM_Returns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Invoice\FRM_NewReciepts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Invoice\FRM_NewReciepts.Designer.cs">
+      <DependentUpon>FRM_NewReciepts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller\Invoice\FRM_Receipts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,10 +87,70 @@
     <Compile Include="Controller\Invoice\FRMSearchOfReceipts.Designer.cs">
       <DependentUpon>FRMSearchOfReceipts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controller\ادارة الاصناف\اداره الاصناف.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة الاصناف\اداره الاصناف.Designer.cs">
+      <DependentUpon>اداره الاصناف.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة العملاء\اداره العملاء.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة العملاء\اداره العملاء.Designer.cs">
+      <DependentUpon>اداره العملاء.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\اداره المنتجات.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\اداره المنتجات.Designer.cs">
+      <DependentUpon>اداره المنتجات.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\اضافة منتج جديد.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\اضافة منتج جديد.Designer.cs">
+      <DependentUpon>اضافة منتج جديد.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\تعديل _حذف منتج.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\تعديل _حذف منتج.Designer.cs">
+      <DependentUpon>تعديل _حذف منتج.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\فاتورة شراء.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة المنتجات\فاتورة شراء.Designer.cs">
+      <DependentUpon>فاتورة شراء.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\اداره فواتير.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\ادارة فواتير\اداره فواتير.Designer.cs">
+      <DependentUpon>اداره فواتير.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\الرئسيه\الرئسية.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\الرئسيه\الرئسية.Designer.cs">
+      <DependentUpon>الرئسية.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\فاتوره سابقة\فاتورة سابقة.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\فاتوره سابقة\فاتورة سابقة.Designer.cs">
+      <DependentUpon>فاتورة سابقة.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controller\Customer\FRMAddcustomerr.resx">
       <DependentUpon>FRMAddcustomerr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Return\FRM_Returns.resx">
+      <DependentUpon>FRM_Returns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Invoice\FRM_NewReciepts.resx">
+      <DependentUpon>FRM_NewReciepts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controller\Invoice\FRM_Receipts.resx">
       <DependentUpon>FRM_Receipts.cs</DependentUpon>
@@ -91,6 +163,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controller\Invoice\FRMSearchOfReceipts.resx">
       <DependentUpon>FRMSearchOfReceipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة الاصناف\اداره الاصناف.resx">
+      <DependentUpon>اداره الاصناف.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة العملاء\اداره العملاء.resx">
+      <DependentUpon>اداره العملاء.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة المنتجات\اداره المنتجات.resx">
+      <DependentUpon>اداره المنتجات.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة المنتجات\اضافة منتج جديد.resx">
+      <DependentUpon>اضافة منتج جديد.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة المنتجات\تعديل _حذف منتج.resx">
+      <DependentUpon>تعديل _حذف منتج.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة المنتجات\فاتورة شراء.resx">
+      <DependentUpon>فاتورة شراء.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\ادارة فواتير\اداره فواتير.resx">
+      <DependentUpon>اداره فواتير.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\الرئسيه\الرئسية.resx">
+      <DependentUpon>الرئسية.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\فاتوره سابقة\فاتورة سابقة.resx">
+      <DependentUpon>فاتورة سابقة.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,5 +213,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
