@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using Belal.Controller.ادارة_فواتير;
-using Belal.Controller.ادارة_الاصناف;
-using Belal.Controller.ادارة_العملاء;
-using Belal.Controller.ادارة_المنتجات;
-using Belal.Controller.Invoice;
-using Belal.Controller.Receipts;
 
 
 namespace Belal.Controller.Invoice

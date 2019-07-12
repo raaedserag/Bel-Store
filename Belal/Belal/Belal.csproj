@@ -45,114 +45,121 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\ادارة فواتير\FRM_NewReciepts.cs">
+    <Compile Include="DataAccessLayer\DataAccsessLayer.cs" />
+    <Compile Include="Helpers\CategoriesHelpers.cs" />
+    <Compile Include="Helpers\ProductHelper.cs" />
+    <Compile Include="Model\Categories.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\Receipts.cs" />
+    <Compile Include="Presentation Layer\ادارة فواتير\FRM_NewReciepts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\ادارة فواتير\FRM_NewReciepts.Designer.cs">
+    <Compile Include="Presentation Layer\ادارة فواتير\FRM_NewReciepts.Designer.cs">
       <DependentUpon>FRM_NewReciepts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\ادارة فواتير\FRM_Receipts.cs">
+    <Compile Include="Presentation Layer\ادارة فواتير\FRM_Receipts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\ادارة فواتير\FRM_Receipts.Designer.cs">
+    <Compile Include="Presentation Layer\ادارة فواتير\FRM_Receipts.Designer.cs">
       <DependentUpon>FRM_Receipts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\ادارة الاصناف\اداره الاصناف.cs">
+    <Compile Include="Presentation Layer\ادارة الاصناف\اداره الاصناف.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\ادارة الاصناف\اداره الاصناف.Designer.cs">
+    <Compile Include="Presentation Layer\ادارة الاصناف\اداره الاصناف.Designer.cs">
       <DependentUpon>اداره الاصناف.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\ادارة العملاء\اداره العملاء.cs">
+    <Compile Include="Presentation Layer\ادارة العملاء\اداره العملاء.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\ادارة العملاء\اداره العملاء.Designer.cs">
+    <Compile Include="Presentation Layer\ادارة العملاء\اداره العملاء.Designer.cs">
       <DependentUpon>اداره العملاء.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\ادارة المنتجات\اداره المنتجات.cs">
+    <Compile Include="Presentation Layer\ادارة المنتجات\اداره المنتجات.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\ادارة المنتجات\اداره المنتجات.Designer.cs">
+    <Compile Include="Presentation Layer\ادارة المنتجات\اداره المنتجات.Designer.cs">
       <DependentUpon>اداره المنتجات.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\ادارة المنتجات\اضافة منتج جديد.cs">
+    <Compile Include="Presentation Layer\ادارة المنتجات\اضافة منتج جديد.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\ادارة المنتجات\اضافة منتج جديد.Designer.cs">
+    <Compile Include="Presentation Layer\ادارة المنتجات\اضافة منتج جديد.Designer.cs">
       <DependentUpon>اضافة منتج جديد.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\ادارة المنتجات\تعديل _حذف منتج.cs">
+    <Compile Include="Presentation Layer\ادارة المنتجات\تعديل _حذف منتج.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\ادارة المنتجات\تعديل _حذف منتج.Designer.cs">
+    <Compile Include="Presentation Layer\ادارة المنتجات\تعديل _حذف منتج.Designer.cs">
       <DependentUpon>تعديل _حذف منتج.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\ادارة المنتجات\فاتورة شراء.cs">
+    <Compile Include="Presentation Layer\ادارة المنتجات\فاتورة شراء.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\ادارة المنتجات\فاتورة شراء.Designer.cs">
+    <Compile Include="Presentation Layer\ادارة المنتجات\فاتورة شراء.Designer.cs">
       <DependentUpon>فاتورة شراء.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\ادارة فواتير\ShowReceipt.cs">
+    <Compile Include="Presentation Layer\ادارة فواتير\ShowReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\ادارة فواتير\ShowReceipt.Designer.cs">
+    <Compile Include="Presentation Layer\ادارة فواتير\ShowReceipt.Designer.cs">
       <DependentUpon>ShowReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\ادارة فواتير\اداره فواتير.cs">
+    <Compile Include="Presentation Layer\ادارة فواتير\اداره فواتير.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\ادارة فواتير\اداره فواتير.Designer.cs">
+    <Compile Include="Presentation Layer\ادارة فواتير\اداره فواتير.Designer.cs">
       <DependentUpon>اداره فواتير.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\الرئسيه\الرئسية.cs">
+    <Compile Include="Presentation Layer\الرئسيه\الرئسية.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\الرئسيه\الرئسية.Designer.cs">
+    <Compile Include="Presentation Layer\الرئسيه\الرئسية.Designer.cs">
       <DependentUpon>الرئسية.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\ادارة فواتير\فاتورة سابقة.cs">
+    <Compile Include="Presentation Layer\ادارة فواتير\فاتورة سابقة.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controller\ادارة فواتير\فاتورة سابقة.Designer.cs">
+    <Compile Include="Presentation Layer\ادارة فواتير\فاتورة سابقة.Designer.cs">
       <DependentUpon>فاتورة سابقة.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controller\ادارة فواتير\FRM_NewReciepts.resx">
+    <EmbeddedResource Include="Presentation Layer\ادارة فواتير\FRM_NewReciepts.resx">
       <DependentUpon>FRM_NewReciepts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\ادارة فواتير\FRM_Receipts.resx">
+    <EmbeddedResource Include="Presentation Layer\ادارة فواتير\FRM_Receipts.resx">
       <DependentUpon>FRM_Receipts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\ادارة الاصناف\اداره الاصناف.resx">
+    <EmbeddedResource Include="Presentation Layer\ادارة الاصناف\اداره الاصناف.resx">
       <DependentUpon>اداره الاصناف.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\ادارة العملاء\اداره العملاء.resx">
+    <EmbeddedResource Include="Presentation Layer\ادارة العملاء\اداره العملاء.resx">
       <DependentUpon>اداره العملاء.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\ادارة المنتجات\اداره المنتجات.resx">
+    <EmbeddedResource Include="Presentation Layer\ادارة المنتجات\اداره المنتجات.resx">
       <DependentUpon>اداره المنتجات.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\ادارة المنتجات\اضافة منتج جديد.resx">
+    <EmbeddedResource Include="Presentation Layer\ادارة المنتجات\اضافة منتج جديد.resx">
       <DependentUpon>اضافة منتج جديد.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\ادارة المنتجات\تعديل _حذف منتج.resx">
+    <EmbeddedResource Include="Presentation Layer\ادارة المنتجات\تعديل _حذف منتج.resx">
       <DependentUpon>تعديل _حذف منتج.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\ادارة المنتجات\فاتورة شراء.resx">
+    <EmbeddedResource Include="Presentation Layer\ادارة المنتجات\فاتورة شراء.resx">
       <DependentUpon>فاتورة شراء.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\ادارة فواتير\ShowReceipt.resx">
+    <EmbeddedResource Include="Presentation Layer\ادارة فواتير\ShowReceipt.resx">
       <DependentUpon>ShowReceipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\ادارة فواتير\اداره فواتير.resx">
+    <EmbeddedResource Include="Presentation Layer\ادارة فواتير\اداره فواتير.resx">
       <DependentUpon>اداره فواتير.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\الرئسيه\الرئسية.resx">
+    <EmbeddedResource Include="Presentation Layer\الرئسيه\الرئسية.resx">
       <DependentUpon>الرئسية.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\ادارة فواتير\فاتورة سابقة.resx">
+    <EmbeddedResource Include="Presentation Layer\ادارة فواتير\فاتورة سابقة.resx">
       <DependentUpon>فاتورة سابقة.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
