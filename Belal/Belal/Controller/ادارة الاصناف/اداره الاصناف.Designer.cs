@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
@@ -41,28 +40,24 @@
             this.PRODUCTSBUTTON = new System.Windows.Forms.Button();
             this.CLIENTSBUTTON = new System.Windows.Forms.Button();
             this.RECEIPTSBUTTON = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.DASHBOARDPANEL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(170, 121);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "بحث";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(317, 121);
+            this.textBox1.Location = new System.Drawing.Point(159, 134);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 36);
+            this.textBox1.Size = new System.Drawing.Size(186, 36);
             this.textBox1.TabIndex = 1;
             // 
             // dataGridView1
@@ -70,13 +65,13 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 194);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(924, 197);
+            this.dataGridView1.Size = new System.Drawing.Size(426, 197);
             this.dataGridView1.TabIndex = 2;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(383, 464);
+            this.button1.Location = new System.Drawing.Point(129, 464);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 36);
             this.button1.TabIndex = 5;
@@ -86,7 +81,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(563, 464);
+            this.button2.Location = new System.Drawing.Point(339, 464);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 36);
             this.button2.TabIndex = 6;
@@ -95,17 +90,17 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(317, 409);
+            this.textBox2.Location = new System.Drawing.Point(129, 409);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(380, 36);
+            this.textBox2.Size = new System.Drawing.Size(309, 36);
             this.textBox2.TabIndex = 8;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(121, 409);
+            this.label3.Location = new System.Drawing.Point(8, 409);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 23);
             this.label3.TabIndex = 7;
@@ -173,12 +168,81 @@
             this.RECEIPTSBUTTON.UseVisualStyleBackColor = true;
             this.RECEIPTSBUTTON.Click += new System.EventHandler(this.RECEIPTSBUTTON_Click);
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(24, 134);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(99, 36);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "بحث";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.radioButton1.Location = new System.Drawing.Point(159, 80);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(136, 28);
+            this.radioButton1.TabIndex = 11;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "حذف / تعديل";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.radioButton2.Location = new System.Drawing.Point(702, 91);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(119, 28);
+            this.radioButton2.TabIndex = 12;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "اضافة صنف";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(737, 168);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(186, 36);
+            this.textBox3.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(545, 168);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 23);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "اسم الصنف";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(657, 240);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(188, 36);
+            this.button4.TabIndex = 15;
+            this.button4.Text = "اضافة الصنف";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // اداره_الاصناف
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(948, 512);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.DASHBOARDPANEL);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
@@ -186,7 +250,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximumSize = new System.Drawing.Size(968, 555);
             this.MinimumSize = new System.Drawing.Size(968, 43);
@@ -204,7 +267,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
@@ -217,5 +279,11 @@
         private System.Windows.Forms.Button PRODUCTSBUTTON;
         private System.Windows.Forms.Button CLIENTSBUTTON;
         private System.Windows.Forms.Button RECEIPTSBUTTON;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -57,12 +57,6 @@
     <Compile Include="Controller\ادارة فواتير\FRM_Receipts.Designer.cs">
       <DependentUpon>FRM_Receipts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\ادارة فواتير\FRMSearchOfReceipts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Controller\ادارة فواتير\FRMSearchOfReceipts.Designer.cs">
-      <DependentUpon>FRMSearchOfReceipts.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controller\ادارة الاصناف\اداره الاصناف.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,9 +124,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controller\ادارة فواتير\FRM_Receipts.resx">
       <DependentUpon>FRM_Receipts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controller\ادارة فواتير\FRMSearchOfReceipts.resx">
-      <DependentUpon>FRMSearchOfReceipts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controller\ادارة الاصناف\اداره الاصناف.resx">
       <DependentUpon>اداره الاصناف.cs</DependentUpon>
