@@ -3,13 +3,13 @@
 -- Table: Categories
 CREATE TABLE Categories (
 	id int IDENTITY(1,1) PRIMARY KEY,
-	name nvarchar(100) UNIQUE
+	name nvarchar(100) UNIQUE NOT NULL
 );
 
 -- Table: Clients
 CREATE TABLE Clients(
 	id int IDENTITY(1,1) PRIMARY KEY,
-	name nvarchar(100),
+	name nvarchar(100) NOT NULL,
 	phone varchar(15),
 	address nvarchar(100),
 	paid float DEFAULT 0.0,
@@ -20,12 +20,12 @@ CREATE TABLE Clients(
 -- Table: Products
 CREATE TABLE Products(
 	id int IDENTITY(1,1) PRIMARY KEY,
-	name nvarchar(100),
-	quantity int,
+	name nvarchar(100) NOT NULL,
+	quantity int DEFAULT 0,
 	vendor nvarchar(100),
 	barcode varchar(50),
-	price float,
-	category_id int,
+	price float NOT NULL,
+	category_id int NOT NULL,
 	FOREIGN KEY (category_id) REFERENCES Categories(id) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
@@ -33,9 +33,9 @@ CREATE TABLE Products(
 CREATE TABLE Receipts(
 	id int IDENTITY(1,1) PRIMARY KEY,
 	receipt_date datetime default CURRENT_TIMESTAMP,
-	client_id int,
+	client_id int NOT NULL,
 	FOREIGN KEY (client_id) REFERENCES Clients(id) ON DELETE SET NULL ON UPDATE CASCADE,
-	past_balance float,
+	past_balance float ,
 	receipt_total float,
 	paid float,
 	new_balance float,
@@ -130,6 +130,13 @@ GO
 -------------------------------    CREATING PROCEDURES        ----------------------------------------------------
 
 ------------ FOR CATEGORIES --------------------------------
+
+-- Get ALL Categories
+GO
+CREATE PROCEDURE Get_categories 
+AS 
+SELECT * FROM Categories	
+
 -- Create New Category
 GO
 CREATE PROCEDURE Add_Category @new_category nvarchar(100)
@@ -161,6 +168,13 @@ GO
 -------------------------------------------------------------
 
 ------------ FOR Products --------------------------------
+
+-- Get ALL Categories
+GO
+CREATE PROCEDURE Get_products
+AS 
+SELECT * FROM Products
+
 -- Create New Product
 CREATE PROCEDURE Add_new_product @name nvarchar(100), @quantity int, @vendor nvarchar(100), @barcode varchar(50), @price float, @category_id int
 AS
@@ -232,8 +246,19 @@ WHERE id = @product_id
 GO
 
 
+
 -------------------------------------------------------------
 ------------ FOR Clients  --------------------------------
+-- Search Clients By Name
+- Search Products BY name
+CREATE PROCEDURE Search_clients_name @name nvarchar(100)
+AS
+SELECT * 
+FROM Clients
+WHERE name LIKE '%' + @name + '%'
+GO
+
+
 -- Get Client
 CREATE PROCEDURE Get_client @client_id int
 AS
@@ -255,6 +280,14 @@ UPDATE Clients
 SET  name = @name, phone = @phone, address = @address, paid = @paid, owed = @owed, balance = @paid - @owed
 WHERE id = @id
 GO
+
+ -- Get Current Balance
+ CREATE PROCEDURE  Get_balance @client_id int
+ AS
+ SELECT paid, owed, balance
+ FROM Clients
+ WHERE id = @ id
+ GO
 
 -- SET BALANCE
 CREATE PROCEDURE Set_balance @id int
@@ -295,6 +328,7 @@ Update Clients
 SET paid = paid + @new_pay
 WHERE id = @id
 EXEC Set_balance @id = @id
+EXEC Get_balance @client_id = @id
 GO
 -------------------------------------------------------------
 
