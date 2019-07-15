@@ -23,7 +23,7 @@ namespace Belal.Controller.ادارة_الاصناف
 
         private string selected_Index;
         private string selected_Name;
-        public DataTable cat;
+        private DataTable cat;
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -85,6 +85,7 @@ namespace Belal.Controller.ادارة_الاصناف
             {
                 new CategoriesHelpers().DeleteCategory(selected_Index);
                 dataGridView1.Rows.Remove(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex]);
+                dataGridView1.ClearSelection();
                 dataGridView1.Refresh();
                 textBox2.Clear();
             }

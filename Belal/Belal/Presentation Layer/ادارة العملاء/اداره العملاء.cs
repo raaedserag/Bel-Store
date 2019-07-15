@@ -11,7 +11,8 @@ using Belal.Controller.ادارة_فواتير;
 using Belal.Controller.ادارة_الاصناف;
 using Belal.Controller.ادارة_العملاء;
 using Belal.Controller.ادارة_المنتجات;
-
+using Belal.Helpers;
+using Belal.Model;
 
 namespace Belal.Controller.ادارة_العملاء
 {
@@ -21,6 +22,13 @@ namespace Belal.Controller.ادارة_العملاء
         {
             InitializeComponent();
         }
+        private DataTable client;
+        private string selected_id ;
+        private string selected_name;
+        private string selected_phone;
+        private string selected_address;
+        private string selected_owed;
+        private string selected_paid;
 
         private void اداره_العملاء_Load(object sender, EventArgs e)
         {
@@ -131,6 +139,200 @@ namespace Belal.Controller.ادارة_العملاء
             this.Hide();
             PRODUCTS.Show();
         
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = false;
+            groupBox2.Enabled = true;
+        }
+
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+            groupBox2.Enabled = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(textBox1.Text)||
+                string.IsNullOrWhiteSpace(textBox2.Text)
+                || string.IsNullOrWhiteSpace(textBox3.Text)||
+                string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                MessageBox.Show("يرجي ادخال البيانات كاملة");
+                return;
+            }
+
+            var client = new Client
+            {
+                Name = textBox1.Text,
+                Phone = textBox2.Text,
+                Address = textBox3.Text,
+                Owed = float.Parse(textBox4.Text),
+                Paid = float.Parse(textBox11.Text)
+
+            };
+            new ClientsHelpers().AddNewClient(client);           MessageBox.Show("تم اضافة العميل "  + textBox1.Text + " بنجاح");
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Text = "0";
+            textBox11.Text = "0";
+
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox6.Text) ||
+                string.IsNullOrWhiteSpace(textBox7.Text) ||
+                string.IsNullOrWhiteSpace(textBox8.Text) ||
+                string.IsNullOrWhiteSpace(textBox9.Text) ||
+                string.IsNullOrWhiteSpace(textBox10.Text) 
+                )
+            {
+                MessageBox.Show(@"يرجى اختيار صنف لتعديله  , عدم ترك حقول ناقصة  ", @"خطأ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (MessageBox.Show(string.Format("هل تريد تعديل العميل " + selected_name + "؟" ), @"تحذير",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                new ClientsHelpers().UpdateClient(selected_id,
+                    selected_name,
+                    selected_phone,
+                    selected_address,
+                    selected_paid, selected_owed);
+
+                client.Rows[dataGridView1.CurrentCell.RowIndex]["name"] = textBox6.Text;
+                client.Rows[dataGridView1.CurrentCell.RowIndex]["phone"] = textBox7.Text;
+                client.Rows[dataGridView1.CurrentCell.RowIndex]["address"] = textBox8.Text;
+                client.Rows[dataGridView1.CurrentCell.RowIndex]["owed"] = textBox10.Text;
+                client.Rows[dataGridView1.CurrentCell.RowIndex]["paid"] = textBox9.Text;
+            }
+
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            client = new ClientsHelpers().SearchClients(textBox5.Text);
+            dataGridView1.DataSource = client;
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            selected_id = client.Rows[dataGridView1.CurrentCell.RowIndex]["id"].ToString();
+            selected_name = client.Rows[dataGridView1.CurrentCell.RowIndex]["name"].ToString();
+            selected_phone = client.Rows[dataGridView1.CurrentCell.RowIndex]["phone"].ToString();
+            selected_address = client.Rows[dataGridView1.CurrentCell.RowIndex]["address"].ToString();
+            selected_owed = client.Rows[dataGridView1.CurrentCell.RowIndex]["owed"].ToString();
+            selected_paid = client.Rows[dataGridView1.CurrentCell.RowIndex]["paid"].ToString();
+
+            textBox6.Text = selected_name;
+            textBox7.Text = selected_phone;
+            textBox8.Text = selected_address;
+            textBox10.Text = selected_owed;
+            textBox9.Text = selected_paid;
+
+        }
+
+        private void textBox6_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                MessageBox.Show(@"يرجى اختيار عميل لحذفه  ", @"خطأ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (MessageBox.Show(string.Format("هل تريد حذف العميل " + selected_name + "?"), @"تحذير",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                new ClientsHelpers().DeleteClient(selected_id);
+                dataGridView1.Rows.Remove(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex]);
+                dataGridView1.Refresh();
+                textBox6.Clear();
+                textBox7.Clear();
+                textBox8.Clear();
+                textBox9.Clear();
+                textBox10.Clear();
+
+            }
+             
+
+
         }
     }
 }

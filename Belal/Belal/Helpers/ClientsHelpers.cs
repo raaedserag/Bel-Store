@@ -34,7 +34,7 @@ namespace Belal.Helpers
             parms[parms.Count - 1].Value = new_client.Owed;
 
             new DataAccessLayer.DataAccsessLayer().ExecuteProcedure("Add_client", parms.ToArray());
-            MessageBox.Show(@"تم إاضافة العميل بنجاح");
+            
         }
         public DataTable SearchClients(string search_key)
         {
@@ -57,25 +57,36 @@ namespace Belal.Helpers
         public void UpdateClient(string client_id, string new_name, string new_phone, string new_address, string new_paid, string new_owed)
         {
             var parms = new List<SqlParameter>();
-            parms.Add(new SqlParameter("@id", SqlDbType.NVarChar));
+
+            parms.Add(new SqlParameter("@id", SqlDbType.Int));
             parms[parms.Count - 1].Value = client_id;
 
             parms.Add(new SqlParameter("@name", SqlDbType.NVarChar));
             parms[parms.Count - 1].Value = new_name;
 
-            parms.Add(new SqlParameter("@phone", SqlDbType.NVarChar));
+            parms.Add(new SqlParameter("@phone", SqlDbType.VarChar));
             parms[parms.Count - 1].Value = new_phone;
 
             parms.Add(new SqlParameter("@address", SqlDbType.NVarChar));
             parms[parms.Count - 1].Value = new_address;
 
-            parms.Add(new SqlParameter("@paid", SqlDbType.NVarChar));
+            parms.Add(new SqlParameter("@paid", SqlDbType.Float));
             parms[parms.Count - 1].Value = new_paid;
 
-            parms.Add(new SqlParameter("@owed", SqlDbType.NVarChar));
+            parms.Add(new SqlParameter("@owed", SqlDbType.Float));
             parms[parms.Count - 1].Value = new_owed;
+            try
+            {
+                new DataAccessLayer.DataAccsessLayer().ExecuteProcedure("Update_client", parms.ToArray());
+                MessageBox.Show("SUCCESS");
 
-            new DataAccessLayer.DataAccsessLayer().ExecuteProcedure("Update_client", parms.ToArray());
+            }
+            catch
+            {
+                MessageBox.Show("Test2");
+            }
+
+            
 
         }
         public DataTable GetClient(string client_id)
