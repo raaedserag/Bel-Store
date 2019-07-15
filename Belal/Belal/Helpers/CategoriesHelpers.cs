@@ -20,7 +20,7 @@ namespace Belal.Helpers
             parms[parms.Count - 1].Value = categories.Name;
 
             new DataAccessLayer.DataAccsessLayer().ExecuteProcedure("Add_Category", parms.ToArray());
-            MessageBox.Show(@"تم إاضافة الصنف بنجاح");
+            
         }
 
         public DataTable SearchCategories(string search_key)

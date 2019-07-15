@@ -5,20 +5,25 @@ using Belal.Helpers;
 using Belal.Model;
 using System;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
+
 
 namespace Belal.Controller.ادارة_الاصناف
 {
     public partial class اداره_الاصناف : Form
     {
-
+       
         
         public اداره_الاصناف()
         {
             InitializeComponent();
+           
         }
 
-        private int selected_Index;
-
+        private string selected_Index;
+        private string selected_Name;
+        public DataTable cat;
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -68,9 +73,23 @@ namespace Belal.Controller.ادارة_الاصناف
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show(@"يرجى اختيار صنف لحذفه  ", @"خطأ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return ;
+            }
+            if (MessageBox.Show(string.Format("هل تريد حذف الصنف " + selected_Name + "?"), @"تحذير",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question, 
+                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                new CategoriesHelpers().DeleteCategory(selected_Index);
+                dataGridView1.Rows.Remove(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex]);
+                dataGridView1.Refresh();
+                textBox2.Clear();
+            }
 
         }
-
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             groupBox2.Enabled = false;
@@ -93,6 +112,9 @@ namespace Belal.Controller.ادارة_الاصناف
 
 
             new CategoriesHelpers().AddNewCatogry(categories);
+            MessageBox.Show(@"تم إاضافة الصنف " + textBox3.Text+" بنجاح");
+            textBox3.Clear();
+
         }
 
         private void اداره_الاصناف_Load(object sender, EventArgs e)
@@ -102,19 +124,50 @@ namespace Belal.Controller.ادارة_الاصناف
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var cat = new CategoriesHelpers().SearchCategories(textBox1.Text);
+            cat = new CategoriesHelpers().SearchCategories(textBox1.Text);
             dataGridView1.DataSource = cat;
 
 
+        
+      
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selected_Name = cat.Rows[dataGridView1.CurrentCell.RowIndex]["name"].ToString(); 
+            textBox2.Text = selected_Name; 
+            selected_Index = cat.Rows[dataGridView1.CurrentCell.RowIndex]["id"].ToString();
             
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show(@"يرجى اختيار صنف لتعديله  ", @"خطأ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (MessageBox.Show(string.Format("هل تريد تعديل الصنف من " + selected_Name + "إلى " + textBox2.Text ), @"تحذير",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                new CategoriesHelpers().UpdateCategory(selected_Index, textBox2.Text);
+                cat.Rows[dataGridView1.CurrentCell.RowIndex]["name"] = textBox2.Text;
+            }
             
         }
 
-        private void dataGridView1_CurrentCellChanged(object sender, DataGridViewCellEventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            textBox2.Text = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex
-            ].Cells[dataGridView1.CurrentCell.ColumnIndex].Value.ToString();
-           
+
+        }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
