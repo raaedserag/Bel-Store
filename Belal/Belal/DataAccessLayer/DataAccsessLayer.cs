@@ -12,7 +12,7 @@ namespace Belal.DataAccessLayer
 
         
         public string SqlConnection { get; set; } =
-            @"Data Source=RAAED-SERAG\\HODHOD;
+            @"Data Source=RAAED-SERAG\HODHOD;
            Initial Catalog=bel;
           Integrated Security=True";
 
