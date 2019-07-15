@@ -12,19 +12,18 @@ namespace Belal.DataAccessLayer
 
         
         public string SqlConnection { get; set; } =
-            @"Data Source=DESKTOP-LO44UHS\LAJJA;
+            @"Data Source=RAAED-SERAG\\HODHOD;
            Initial Catalog=bel;
           Integrated Security=True";
 
 
-        public string Server { get; set; } = "DESKTOP-LO44UHS\\LAJJA";
+        public string Server { get; set; } = "RAAED-SERAG\\HODHOD";
 
 
         public string Database { get; set; } = "bel";
 
 
-
-        private SqlConnection _connection;
+        public SqlConnection _connection;
 
         public DataAccsessLayer()
         {

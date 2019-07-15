@@ -1,15 +1,13 @@
-﻿CREATE DATABASE Belal-Store;
-
--- Table: Categories
+﻿-- Table: Categories
 CREATE TABLE Categories (
 	id int IDENTITY(1,1) PRIMARY KEY,
-	name nvarchar(100) UNIQUE NOT NULL
+	name nvarchar(100) UNIQUE 
 );
 
 -- Table: Clients
 CREATE TABLE Clients(
 	id int IDENTITY(1,1) PRIMARY KEY,
-	name nvarchar(100) NOT NULL,
+	name nvarchar(100) ,
 	phone varchar(15),
 	address nvarchar(100),
 	paid float DEFAULT 0.0,
@@ -20,12 +18,12 @@ CREATE TABLE Clients(
 -- Table: Products
 CREATE TABLE Products(
 	id int IDENTITY(1,1) PRIMARY KEY,
-	name nvarchar(100) NOT NULL,
+	name nvarchar(100) ,
 	quantity int DEFAULT 0,
 	vendor nvarchar(100),
 	barcode varchar(50),
-	price float NOT NULL,
-	category_id int NOT NULL,
+	price float ,
+	category_id int ,
 	FOREIGN KEY (category_id) REFERENCES Categories(id) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
@@ -33,7 +31,7 @@ CREATE TABLE Products(
 CREATE TABLE Receipts(
 	id int IDENTITY(1,1) PRIMARY KEY,
 	receipt_date datetime default CURRENT_TIMESTAMP,
-	client_id int NOT NULL,
+	client_id int ,
 	FOREIGN KEY (client_id) REFERENCES Clients(id) ON DELETE SET NULL ON UPDATE CASCADE,
 	past_balance float ,
 	receipt_total float,
@@ -176,6 +174,7 @@ AS
 SELECT * FROM Products
 
 -- Create New Product
+GO
 CREATE PROCEDURE Add_new_product @name nvarchar(100), @quantity int, @vendor nvarchar(100), @barcode varchar(50), @price float, @category_id int
 AS
 INSERT INTO Products(name, quantity, vendor, barcode, price, category_id) VALUES (@name, @quantity, @vendor, @barcode, @price, @category_id)
@@ -250,7 +249,6 @@ GO
 -------------------------------------------------------------
 ------------ FOR Clients  --------------------------------
 -- Search Clients By Name
-- Search Products BY name
 CREATE PROCEDURE Search_clients_name @name nvarchar(100)
 AS
 SELECT * 
@@ -286,7 +284,7 @@ GO
  AS
  SELECT paid, owed, balance
  FROM Clients
- WHERE id = @ id
+ WHERE id = @client_id
  GO
 
 -- SET BALANCE
