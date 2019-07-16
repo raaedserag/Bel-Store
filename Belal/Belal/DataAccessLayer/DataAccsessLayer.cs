@@ -99,7 +99,7 @@ namespace Belal.DataAccessLayer
             if (param != null)
                 cmd.Parameters.AddRange(param);
 
-            //this.Open();
+            
             _connection.Open();
             var rows = cmd.ExecuteNonQuery();
             Close();

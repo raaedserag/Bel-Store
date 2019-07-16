@@ -13,6 +13,7 @@ using Belal.Controller.ادارة_العملاء;
 using Belal.Controller.ادارة_المنتجات;
 using Belal.Helpers;
 using Belal.Model;
+using System.Diagnostics;
 
 namespace Belal.Controller.ادارة_العملاء
 {
@@ -23,12 +24,13 @@ namespace Belal.Controller.ادارة_العملاء
             InitializeComponent();
         }
         private DataTable client;
-        private string selected_id ;
+        private string last_search;
+        private int selected_id ;
         private string selected_name;
         private string selected_phone;
         private string selected_address;
-        private string selected_owed;
-        private string selected_paid;
+        private float selected_owed;
+        private float selected_paid;
 
         private void اداره_العملاء_Load(object sender, EventArgs e)
         {
@@ -233,17 +235,27 @@ namespace Belal.Controller.ادارة_العملاء
                 MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                new ClientsHelpers().UpdateClient(selected_id,
-                    selected_name,
-                    selected_phone,
-                    selected_address,
-                    selected_paid, selected_owed);
+
+               
+                var updated_client = new Client
+                {
+
+                    Id = selected_id,
+                    Name = textBox6.Text,
+                    Phone = textBox7.Text,
+                    Address = textBox8.Text,
+                    Owed = float.Parse(textBox10.Text),
+                    Paid = float.Parse(textBox9.Text)
+
+                };
+                new ClientsHelpers().UpdateClient(updated_client);
 
                 client.Rows[dataGridView1.CurrentCell.RowIndex]["name"] = textBox6.Text;
                 client.Rows[dataGridView1.CurrentCell.RowIndex]["phone"] = textBox7.Text;
                 client.Rows[dataGridView1.CurrentCell.RowIndex]["address"] = textBox8.Text;
                 client.Rows[dataGridView1.CurrentCell.RowIndex]["owed"] = textBox10.Text;
                 client.Rows[dataGridView1.CurrentCell.RowIndex]["paid"] = textBox9.Text;
+                client.Rows[dataGridView1.CurrentCell.RowIndex]["balance"] = (float.Parse(textBox9.Text) - float.Parse(textBox10.Text)).ToString();
             }
 
            
@@ -251,24 +263,48 @@ namespace Belal.Controller.ادارة_العملاء
 
         private void button4_Click(object sender, EventArgs e)
         {
-            client = new ClientsHelpers().SearchClients(textBox5.Text);
+            last_search = textBox5.Text;
+            client = new ClientsHelpers().SearchClients(last_search);
             dataGridView1.DataSource = client;
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            selected_id = client.Rows[dataGridView1.CurrentCell.RowIndex]["id"].ToString();
-            selected_name = client.Rows[dataGridView1.CurrentCell.RowIndex]["name"].ToString();
-            selected_phone = client.Rows[dataGridView1.CurrentCell.RowIndex]["phone"].ToString();
-            selected_address = client.Rows[dataGridView1.CurrentCell.RowIndex]["address"].ToString();
-            selected_owed = client.Rows[dataGridView1.CurrentCell.RowIndex]["owed"].ToString();
-            selected_paid = client.Rows[dataGridView1.CurrentCell.RowIndex]["paid"].ToString();
+            try
+            {
+                selected_id = int.Parse(client.Rows[dataGridView1.CurrentCell.RowIndex]["id"].ToString());
+                selected_name = client.Rows[dataGridView1.CurrentCell.RowIndex]["name"].ToString();
+                selected_phone = client.Rows[dataGridView1.CurrentCell.RowIndex]["phone"].ToString();
+                selected_address = client.Rows[dataGridView1.CurrentCell.RowIndex]["address"].ToString();
+                selected_owed = float.Parse(client.Rows[dataGridView1.CurrentCell.RowIndex]["owed"].ToString());
+                selected_paid = float.Parse(client.Rows[dataGridView1.CurrentCell.RowIndex]["paid"].ToString());
 
-            textBox6.Text = selected_name;
-            textBox7.Text = selected_phone;
-            textBox8.Text = selected_address;
-            textBox10.Text = selected_owed;
-            textBox9.Text = selected_paid;
+                textBox6.Text = selected_name;
+                textBox7.Text = selected_phone;
+                textBox8.Text = selected_address;
+                textBox10.Text = selected_owed.ToString();
+                textBox9.Text = selected_paid.ToString();
+
+            }
+            catch (Exception ex)
+            {
+                client = new ClientsHelpers().SearchClients(last_search);
+                dataGridView1.DataSource = client;
+
+                selected_id = int.Parse(client.Rows[dataGridView1.CurrentCell.RowIndex]["id"].ToString());
+                selected_name = client.Rows[dataGridView1.CurrentCell.RowIndex]["name"].ToString();
+                selected_phone = client.Rows[dataGridView1.CurrentCell.RowIndex]["phone"].ToString();
+                selected_address = client.Rows[dataGridView1.CurrentCell.RowIndex]["address"].ToString();
+                selected_owed = float.Parse(client.Rows[dataGridView1.CurrentCell.RowIndex]["owed"].ToString());
+                selected_paid = float.Parse(client.Rows[dataGridView1.CurrentCell.RowIndex]["paid"].ToString());
+
+                textBox6.Text = selected_name;
+                textBox7.Text = selected_phone;
+                textBox8.Text = selected_address;
+                textBox10.Text = selected_owed.ToString();
+                textBox9.Text = selected_paid.ToString();
+
+            }
 
         }
 
@@ -320,8 +356,9 @@ namespace Belal.Controller.ادارة_العملاء
                 MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                new ClientsHelpers().DeleteClient(selected_id);
-                dataGridView1.Rows.Remove(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex]);
+                new ClientsHelpers().DeleteClient(selected_id.ToString());
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentCell.RowIndex);
+                dataGridView1.ClearSelection();
                 dataGridView1.Refresh();
                 textBox6.Clear();
                 textBox7.Clear();

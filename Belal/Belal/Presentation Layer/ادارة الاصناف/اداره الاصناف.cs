@@ -20,7 +20,7 @@ namespace Belal.Controller.ادارة_الاصناف
             InitializeComponent();
            
         }
-
+        private string last_search;
         private string selected_Index;
         private string selected_Name;
         private DataTable cat;
@@ -84,7 +84,7 @@ namespace Belal.Controller.ادارة_الاصناف
                 MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 new CategoriesHelpers().DeleteCategory(selected_Index);
-                dataGridView1.Rows.Remove(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex]);
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentCell.RowIndex);
                 dataGridView1.ClearSelection();
                 dataGridView1.Refresh();
                 textBox2.Clear();
@@ -125,7 +125,8 @@ namespace Belal.Controller.ادارة_الاصناف
 
         private void button3_Click(object sender, EventArgs e)
         {
-            cat = new CategoriesHelpers().SearchCategories(textBox1.Text);
+            last_search = textBox1.Text;
+            cat = new CategoriesHelpers().SearchCategories(last_search);
             dataGridView1.DataSource = cat;
 
 
@@ -135,10 +136,24 @@ namespace Belal.Controller.ادارة_الاصناف
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            selected_Name = cat.Rows[dataGridView1.CurrentCell.RowIndex]["name"].ToString(); 
-            textBox2.Text = selected_Name; 
-            selected_Index = cat.Rows[dataGridView1.CurrentCell.RowIndex]["id"].ToString();
-            
+            try
+            {
+                selected_Name = cat.Rows[dataGridView1.CurrentCell.RowIndex]["name"].ToString();
+                textBox2.Text = selected_Name;
+                selected_Index = cat.Rows[dataGridView1.CurrentCell.RowIndex]["id"].ToString();
+
+            }
+            catch(Exception ex)
+            {
+                cat = new CategoriesHelpers().SearchCategories(last_search);
+                dataGridView1.DataSource = cat;
+
+                selected_Name = cat.Rows[dataGridView1.CurrentCell.RowIndex]["name"].ToString();
+                textBox2.Text = selected_Name;
+                selected_Index = cat.Rows[dataGridView1.CurrentCell.RowIndex]["id"].ToString();
+
+
+            }
 
 
         }

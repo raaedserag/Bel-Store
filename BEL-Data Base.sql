@@ -272,11 +272,12 @@ INSERT INTO Clients(name, phone, address, paid, owed, balance) VALUES(@name, @ph
 Go
 
 -- Update Existing Client
-CREATE PROCEDURE Update_client @id int, @name nvarchar(100), @phone varchar(15), @address nvarchar(100), @paid float, @owed float
+ALTER PROCEDURE Update_client @id int, @name nvarchar(100), @phone varchar(15), @address nvarchar(100), @paid float, @owed float
 AS
+
 UPDATE Clients
 SET  name = @name, phone = @phone, address = @address, paid = @paid, owed = @owed, balance = @paid - @owed
-WHERE id = @id
+WHERE id = @id 
 GO
 
  -- Get Current Balance
@@ -443,3 +444,7 @@ SELECT * FROM ReturnedReceipts WHERE client_id = @client_id
 ORDER BY receipt_date
 GO
 
+
+
+
+SELECT * FROM Clients
