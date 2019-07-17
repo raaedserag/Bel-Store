@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Belal.Controller.ادارة_فواتير;
-using Belal.Controller.ادارة_الاصناف;
-using Belal.Controller.ادارة_العملاء;
+﻿using Belal.Controller.ادارة_الاصناف;
 using Belal.Controller.ادارة_المنتجات;
+using Belal.Controller.ادارة_فواتير;
 using Belal.Helpers;
 using Belal.Model;
-using System.Diagnostics;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 namespace Belal.Controller.ادارة_العملاء
 {
@@ -187,7 +179,8 @@ namespace Belal.Controller.ادارة_العملاء
                 Paid = float.Parse(textBox11.Text)
 
             };
-            new ClientsHelpers().AddNewClient(client);           MessageBox.Show("تم اضافة العميل "  + textBox1.Text + " بنجاح");
+            new ClientsHelpers().AddNewClient(client);
+            MessageBox.Show("تم اضافة العميل "  + textBox1.Text + " بنجاح");
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
