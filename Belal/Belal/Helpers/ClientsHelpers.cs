@@ -86,14 +86,14 @@ namespace Belal.Helpers
             return new DataAccessLayer.DataAccsessLayer().EXECUTE("Get_client", parms.ToArray());
 
         }
-        public DataTable Pay_Cash(string client_id, string new_pay)
+        public DataTable Pay_Cash ( string client_id,string new_pay)
         {
             var parms = new List<SqlParameter>();
-            parms.Add(new SqlParameter("@id", SqlDbType.NVarChar));
-            parms[parms.Count - 1].Value = client_id;
+            parms.Add(new SqlParameter("@id", SqlDbType.Int));
+            parms[parms.Count - 1].Value =  int.Parse(client_id);
 
-            parms.Add(new SqlParameter("@new_pay", SqlDbType.NVarChar));
-            parms[parms.Count - 1].Value = new_pay;
+            parms.Add(new SqlParameter("@new_pay", SqlDbType.Float));
+            parms[parms.Count - 1].Value =float.Parse( new_pay);
 
             return new DataAccessLayer.DataAccsessLayer().EXECUTE("Pay_cash", parms.ToArray());
 
