@@ -11,7 +11,7 @@ using Belal.Controller.ادارة_فواتير;
 using Belal.Controller.ادارة_الاصناف;
 using Belal.Controller.ادارة_العملاء;
 using Belal.Controller.ادارة_المنتجات;
-
+using Belal.Presentation_Layer.Mains;
 
 namespace Belal.Controller.ادارة_المنتجات
 {
@@ -38,7 +38,7 @@ namespace Belal.Controller.ادارة_المنتجات
 
         private void CLIENTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form CLIENTS = new اداره_العملاء();
+            Form CLIENTS = new العملاء();
             this.Hide();
             CLIENTS.Show();
 

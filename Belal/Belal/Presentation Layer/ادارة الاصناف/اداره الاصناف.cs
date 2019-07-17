@@ -7,7 +7,7 @@ using System;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
-
+using Belal.Presentation_Layer.Mains;
 
 namespace Belal.Controller.ادارة_الاصناف
 {
@@ -42,7 +42,7 @@ namespace Belal.Controller.ادارة_الاصناف
 
         private void CLIENTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form CLIENTS = new اداره_العملاء();
+            Form CLIENTS = new العملاء();
             this.Hide();
             CLIENTS.Show();
 

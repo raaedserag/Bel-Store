@@ -53,6 +53,18 @@
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Receipts.cs" />
+    <Compile Include="Presentation Layer\Mains\العملاء.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Mains\العملاء.Designer.cs">
+      <DependentUpon>العملاء.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ادارة العملاء\دفع نقدي.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ادارة العملاء\دفع نقدي.Designer.cs">
+      <DependentUpon>دفع نقدي.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\ادارة فواتير\FRM_NewReciepts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +83,11 @@
     <Compile Include="Presentation Layer\ادارة الاصناف\اداره الاصناف.Designer.cs">
       <DependentUpon>اداره الاصناف.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\ادارة العملاء\اداره العملاء.cs">
+    <Compile Include="Presentation Layer\ادارة العملاء\إدارة الحسابات.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\ادارة العملاء\اداره العملاء.Designer.cs">
-      <DependentUpon>اداره العملاء.cs</DependentUpon>
+    <Compile Include="Presentation Layer\ادارة العملاء\إدارة الحسابات.Designer.cs">
+      <DependentUpon>إدارة الحسابات.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\ادارة المنتجات\اداره المنتجات.cs">
       <SubType>Form</SubType>
@@ -127,6 +139,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation Layer\Mains\العملاء.resx">
+      <DependentUpon>العملاء.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ادارة العملاء\دفع نقدي.resx">
+      <DependentUpon>دفع نقدي.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\ادارة فواتير\FRM_NewReciepts.resx">
       <DependentUpon>FRM_NewReciepts.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,8 +154,8 @@
     <EmbeddedResource Include="Presentation Layer\ادارة الاصناف\اداره الاصناف.resx">
       <DependentUpon>اداره الاصناف.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\ادارة العملاء\اداره العملاء.resx">
-      <DependentUpon>اداره العملاء.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation Layer\ادارة العملاء\إدارة الحسابات.resx">
+      <DependentUpon>إدارة الحسابات.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\ادارة المنتجات\اداره المنتجات.resx">
       <DependentUpon>اداره المنتجات.cs</DependentUpon>
