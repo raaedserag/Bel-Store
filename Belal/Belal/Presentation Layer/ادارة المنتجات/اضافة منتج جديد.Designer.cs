@@ -60,6 +60,7 @@
             this.textBox1.Location = new System.Drawing.Point(586, 142);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox1.Size = new System.Drawing.Size(323, 28);
             this.textBox1.TabIndex = 1;
             // 
@@ -231,6 +232,7 @@
             this.radioButton2.TabIndex = 5;
             this.radioButton2.Text = "لا يوجد كود";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // DASHBOARDPANEL
             // 
