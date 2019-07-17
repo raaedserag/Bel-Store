@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -71,8 +73,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -125,6 +125,26 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "العميل";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(230, 33);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(111, 23);
+            this.label19.TabIndex = 12;
+            this.label19.Text = "نوع الفاتورة";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "فاتورة بيع",
+            "فاتورة مرتجع"});
+            this.comboBox1.Location = new System.Drawing.Point(22, 33);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(191, 31);
+            this.comboBox1.TabIndex = 11;
             // 
             // button1
             // 
@@ -514,26 +534,6 @@
             this.label18.TabIndex = 12;
             this.label18.Text = "ملاحظات";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "فاتورة بيع",
-            "فاتورة مرتجع"});
-            this.comboBox1.Location = new System.Drawing.Point(22, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 31);
-            this.comboBox1.TabIndex = 11;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(230, 33);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(111, 23);
-            this.label19.TabIndex = 12;
-            this.label19.Text = "نوع الفاتورة";
-            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(16, 659);
@@ -589,6 +589,7 @@
             this.Name = "FRM_Receipts";
             this.RightToLeftLayout = true;
             this.Text = "FRM_Receipts";
+            this.Load += new System.EventHandler(this.FRM_Receipts_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

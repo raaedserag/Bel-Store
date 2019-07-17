@@ -272,7 +272,7 @@ INSERT INTO Clients(name, phone, address, paid, owed, balance) VALUES(@name, @ph
 Go
 
 -- Update Existing Client
-ALTER PROCEDURE Update_client @id int, @name nvarchar(100), @phone varchar(15), @address nvarchar(100), @paid float, @owed float
+CREATE PROCEDURE Update_client @id int, @name nvarchar(100), @phone varchar(15), @address nvarchar(100), @paid float, @owed float
 AS
 
 UPDATE Clients
@@ -339,6 +339,16 @@ AS
 DECLARE @client_balance float 
 SET @client_balance =  (SELECT balance FROM Clients WHERE id = @client_id) 
 INSERT INTO Receipts(client_id, past_balance, receipt_total, paid, new_balance, readable_balance, notes) VALUES(@client_id, @client_balance, 0, 0, 0, 'hk', N'معلش')
+SELECT SCOPE_IDENTITY() as id
+GO
+
+-- Get Receipt Data
+CREATE PROCEDURE Get_receipt_data @receipt_id int
+AS
+SELECT * 
+FROM Receipts_Data
+LEFT JOIN Receipts_Products ON Receipts_Data.receipt_id = Receipts_Products.receipt_id
+WHERE Receipts_Data.receipt_id = @receipt_id 
 GO
 
 
@@ -355,16 +365,9 @@ UPDATE Receipts
 SET receipt_total = @receipt_total, paid = @paid, readable_balance = @readable_balance, notes = @notes, new_balance = past_balance - @receipt_total + @paid
 WHERE id = @receipt_id
 EXEC Update_balance @client_id = @client_id, @new_paid = @paid, @new_owed = @receipt_total
+EXEC Get_receipt_data @receipt_id = @receipt_id
 GO
 
--- Get Receipt Data
-CREATE PROCEDURE Get_receipt_data @receipt_id int
-AS
-SELECT * 
-FROM Receipts_Data
-LEFT JOIN Receipts_Products ON Receipts_Data.receipt_id = Receipts_Products.receipt_id
-WHERE Receipts_Data.receipt_id = @receipt_id 
-GO
 
 -- Search Receipts by client id
 CREATE PROCEDURE Search_receipts_client @client_id nvarchar(100)
@@ -391,7 +394,18 @@ AS
 DECLARE @client_balance float 
 SET @client_balance =  (SELECT balance FROM Clients WHERE id = @client_id) 
 INSERT INTO ReturnedReceipts(client_id, past_balance, receipt_total, paid, new_balance, readable_balance, notes) VALUES(@client_id, @client_balance, 0, 0, 0, 'hk', N'معلش')
+SELECT SCOPE_IDENTITY() as id
 GO
+
+-- Get Returned Receipt Data
+CREATE PROCEDURE Get_Returnedreceipt_data @receipt_id int
+AS
+SELECT * 
+FROM ReturnedReceipts_Data
+LEFT JOIN ReturnedReceipts_Products ON ReturnedReceipts_Data.receipt_id = ReturnedReceipts_Products.receipt_id
+WHERE ReturnedReceipts_Data.receipt_id = @receipt_id 
+GO
+
 
 
 -- Create The Returned Receipt
@@ -407,16 +421,9 @@ UPDATE ReturnedReceipts
 SET receipt_total = @receipt_total, paid = @received, readable_balance = @readable_balance, notes = @notes, new_balance = past_balance + @receipt_total - @received
 WHERE id = @receipt_id
 EXEC Update_Returnedbalance @client_id = @client_id, @new_received =  @received, @new_owed = @receipt_total
+EXEC Get_Returnedreceipt_data @receipt_id = @receipt_id
 GO
 
--- Get Returned Receipt Data
-CREATE PROCEDURE Get_Returnedreceipt_data @receipt_id int
-AS
-SELECT * 
-FROM ReturnedReceipts_Data
-LEFT JOIN ReturnedReceipts_Products ON ReturnedReceipts_Data.receipt_id = ReturnedReceipts_Products.receipt_id
-WHERE ReturnedReceipts_Data.receipt_id = @receipt_id 
-GO
 
 -- Search Returned Receipts by client id
 CREATE PROCEDURE Search_Returnedreceipts_client @client_id nvarchar(100)
@@ -444,7 +451,29 @@ SELECT * FROM ReturnedReceipts WHERE client_id = @client_id
 ORDER BY receipt_date
 GO
 
+/*
+-- FILTER Receipts
+CREATE PROCEDURE Receipts_filter @type int, @start_date datetime, @end_date datetime, @product_name nvarchar(100), @product_barcode varchar(50), @client_name nvarchar(100), @receipt_id int
+AS
+ 
+IF @type = 0   
+BEGIN
+SELECT * FROM Receipts_Data    
+END
+IF @type = 1   
+BEGIN
+SELECT * FROM ReturnedReceipts_Data    
+END
+ELSE
+BEGIN
+SELECT * FROM Receipts  
+UNION
+SELECT * FROM ReturnedReceipts  
+END
 
 
 
-SELECT * FROM Clients
+GO
+
+SELECT * FROM Receipts_Data
+*/

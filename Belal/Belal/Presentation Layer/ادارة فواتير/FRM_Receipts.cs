@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Belal.Controller.ادارة_فواتير;
+using Belal.Helpers;
 namespace Belal.Controller.Invoice
 {
     public partial class FRM_Receipts : Form
@@ -34,6 +35,12 @@ namespace Belal.Controller.Invoice
             Form addclient = new FRM_NewReciepts();
             this.Hide();
             addclient.Show();
+        }
+
+        private void FRM_Receipts_Load(object sender, EventArgs e)
+        {
+            comboBox1.SelectedItem = "فاتورة بيع";
+            
         }
     }
 }
