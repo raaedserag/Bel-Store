@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 
 namespace Belal.Helpers
 {
@@ -19,30 +18,26 @@ namespace Belal.Helpers
             parms.Add(new SqlParameter("@name", SqlDbType.NVarChar));
             parms[parms.Count - 1].Value = product.Name;
 
-             parms = new List<SqlParameter>();
+
             parms.Add(new SqlParameter("@quantity", SqlDbType.Int));
             parms[parms.Count - 1].Value = product.Quntity;
 
-            parms = new List<SqlParameter>();
             parms.Add(new SqlParameter("@vendor", SqlDbType.NVarChar));
             parms[parms.Count - 1].Value = product.Vendor;
 
-            parms = new List<SqlParameter>();
             parms.Add(new SqlParameter("@barcode", SqlDbType.VarChar));
             parms[parms.Count - 1].Value = product.Barcode;
 
 
-            parms = new List<SqlParameter>();
             parms.Add(new SqlParameter("@price", SqlDbType.Float));
             parms[parms.Count - 1].Value = product.Price;
 
-            parms = new List<SqlParameter>();
+
             parms.Add(new SqlParameter("@category_id", SqlDbType.Int));
             parms[parms.Count - 1].Value = product.category_id;
 
 
             new DataAccessLayer.DataAccsessLayer().ExecuteProcedure("Add_new_product", parms.ToArray());
-            MessageBox.Show(@"تم إاضافة المنتج بنجاح");
         }
 
         public void DeleteProduct(string product_id)
