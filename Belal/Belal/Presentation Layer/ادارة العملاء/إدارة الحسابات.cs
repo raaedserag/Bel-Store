@@ -1,17 +1,8 @@
 ﻿using Belal.Controller.ادارة_الاصناف;
 using Belal.Controller.ادارة_المنتجات;
-<<<<<<< HEAD:Belal/Belal/Presentation Layer/ادارة العملاء/إدارة الحسابات.cs
 using Belal.Presentation_Layer.Mains;
 using Belal.Helpers;
 using Belal.Model;
-=======
-using Belal.Controller.ادارة_فواتير;
-using Belal.Helpers;
-using Belal.Model;
-using System;
-using System.Data;
-using System.Windows.Forms;
->>>>>>> 89d3760f23e86585d0823c014ba0bc1ee01f102f:Belal/Belal/Presentation Layer/ادارة العملاء/اداره العملاء.cs
 
 namespace Belal.Controller.ادارة_العملاء
 {
