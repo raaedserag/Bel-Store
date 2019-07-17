@@ -1,13 +1,7 @@
-﻿using System;
+﻿using Belal.Model;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using Belal.Model;
-using System.Windows.Forms;
-using System.Diagnostics;
 
 namespace Belal.Helpers
 

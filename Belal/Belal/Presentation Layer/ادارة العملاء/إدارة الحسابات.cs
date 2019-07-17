@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Belal.Controller.ادارة_فواتير;
-using Belal.Controller.ادارة_الاصناف;
-using Belal.Controller.ادارة_العملاء;
+﻿using Belal.Controller.ادارة_الاصناف;
 using Belal.Controller.ادارة_المنتجات;
+<<<<<<< HEAD:Belal/Belal/Presentation Layer/ادارة العملاء/إدارة الحسابات.cs
 using Belal.Presentation_Layer.Mains;
 using Belal.Helpers;
 using Belal.Model;
+=======
+using Belal.Controller.ادارة_فواتير;
+using Belal.Helpers;
+using Belal.Model;
+using System;
+using System.Data;
+using System.Windows.Forms;
+>>>>>>> 89d3760f23e86585d0823c014ba0bc1ee01f102f:Belal/Belal/Presentation Layer/ادارة العملاء/اداره العملاء.cs
 
 namespace Belal.Controller.ادارة_العملاء
 {
@@ -187,7 +185,8 @@ namespace Belal.Controller.ادارة_العملاء
                 Paid = float.Parse(textBox11.Text)
 
             };
-            new ClientsHelpers().AddNewClient(client);           MessageBox.Show("تم اضافة العميل "  + textBox1.Text + " بنجاح");
+            new ClientsHelpers().AddNewClient(client);
+            MessageBox.Show("تم اضافة العميل "  + textBox1.Text + " بنجاح");
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
