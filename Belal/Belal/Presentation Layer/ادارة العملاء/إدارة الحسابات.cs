@@ -3,6 +3,10 @@ using Belal.Controller.ادارة_المنتجات;
 using Belal.Presentation_Layer.Mains;
 using Belal.Helpers;
 using Belal.Model;
+using System.Windows.Forms;
+using System.Data;
+using System;
+using Belal.Controller.ادارة_فواتير;
 
 namespace Belal.Controller.ادارة_العملاء
 {
