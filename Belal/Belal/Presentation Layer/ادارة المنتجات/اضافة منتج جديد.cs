@@ -149,5 +149,34 @@ namespace Belal.Controller.ادارة_المنتجات
                 textBox1.Enabled = false;
             }
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+
+            // 8 mean (backspace)
+
+
+            if (!char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
