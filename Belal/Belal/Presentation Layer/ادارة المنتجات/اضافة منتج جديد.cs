@@ -123,6 +123,15 @@ namespace Belal.Controller.ادارة_المنتجات
             new ProductHelper().AddNewProduct(newproduct);
 
             MessageBox.Show(" تم اضافة المنتج   " + textBox4.Text + "  بنجاح ");
+
+
+
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+            textBox1.Clear();
+    
     
         }
 
@@ -177,6 +186,11 @@ namespace Belal.Controller.ادارة_المنتجات
             {
                 e.Handled = true;
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
