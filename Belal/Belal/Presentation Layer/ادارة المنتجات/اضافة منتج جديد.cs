@@ -192,5 +192,10 @@ namespace Belal.Controller.ادارة_المنتجات
         {
 
         }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
