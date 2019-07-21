@@ -12,15 +12,15 @@ namespace Belal.DataAccessLayer
 
         
         public string SqlConnection { get; set; } =
-            @"Data Source=DESKTOP-LO44UHS\LAJJA;
-           Initial Catalog=bel;
-          Integrated Security=True";
+            String.Format(@"Data Source={0};Initial Catalog={1};Integrated Security=True",
+                Environment.GetEnvironmentVariable("belal_server_database", EnvironmentVariableTarget.User),
+                Environment.GetEnvironmentVariable("belal_name_database", EnvironmentVariableTarget.User));
+            
+
+        public string Server { get; set; } = Environment.GetEnvironmentVariable("belal_server_database", EnvironmentVariableTarget.User);
 
 
-        public string Server { get; set; } = "DESKTOP-LO44UHS\\LAJJA";
-
-
-        public string Database { get; set; } = "bel";
+        public string Database { get; set; } = Environment.GetEnvironmentVariable("belal_name_database", EnvironmentVariableTarget.User);
 
 
         public SqlConnection _connection;
