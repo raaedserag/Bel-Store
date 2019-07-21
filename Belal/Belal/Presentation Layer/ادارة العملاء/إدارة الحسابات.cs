@@ -1,12 +1,12 @@
 ﻿using Belal.Controller.ادارة_الاصناف;
 using Belal.Controller.ادارة_المنتجات;
-using Belal.Presentation_Layer.Mains;
+using Belal.Controller.ادارة_فواتير;
 using Belal.Helpers;
 using Belal.Model;
-using System.Windows.Forms;
-using System.Data;
+using Belal.Presentation_Layer.Mains;
 using System;
-using Belal.Controller.ادارة_فواتير;
+using System.Data;
+using System.Windows.Forms;
 
 namespace Belal.Controller.ادارة_العملاء
 {

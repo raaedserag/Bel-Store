@@ -229,6 +229,7 @@
             this.Controls.Add(this.DASHBOARDPANEL);
             this.Name = "دفع_نقدي";
             this.Text = "دفع_نقدي";
+            this.Load += new System.EventHandler(this.دفع_نقدي_Load);
             this.DASHBOARDPANEL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

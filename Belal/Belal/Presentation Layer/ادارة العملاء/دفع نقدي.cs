@@ -99,5 +99,10 @@ namespace Belal.Presentation_Layer.ادارة_العملاء
             textBox3.Clear();
             textBox1.Clear();
         }
+
+        private void دفع_نقدي_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,7 +19,10 @@ namespace Belal.Controller.ادارة_المنتجات
         public DataTable cat;
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (radioButton1.Checked == true)
+            {
+                textBox1.Enabled = true;
+            }
         }
 
         private void CATEGORIESBUTTON_Click(object sender, EventArgs e)
@@ -60,7 +63,7 @@ namespace Belal.Controller.ادارة_المنتجات
             if (radioButton1.Checked == true )
 
             {
-                textBox1.Enabled = true;
+             
                 if (string.IsNullOrWhiteSpace(textBox1.Text))
                 {
                     MessageBox.Show("يرجي ادخال الكود");
@@ -102,11 +105,7 @@ namespace Belal.Controller.ادارة_المنتجات
             }
 
 
-            if (radioButton2.Enabled == true)
-            {
-                //textBox1.Enabled = false;
-                textBox1.Enabled = false;
-            }
+            
 
            var newproduct = new Product
             {
@@ -124,6 +123,15 @@ namespace Belal.Controller.ادارة_المنتجات
             new ProductHelper().AddNewProduct(newproduct);
 
             MessageBox.Show(" تم اضافة المنتج   " + textBox4.Text + "  بنجاح ");
+
+
+
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+            textBox1.Clear();
+    
     
         }
 
@@ -134,10 +142,60 @@ namespace Belal.Controller.ادارة_المنتجات
 
         private void اضافة_منتج_جديد_Load(object sender, EventArgs e)
         {
+
+            
+
             cat =  new CategoriesHelpers().Get_categories();
             comboBox1.DataSource = cat;
             comboBox1.DisplayMember = "Name";
           //  var x =  comboBox1.SelectedItem "id";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked == true)
+            {
+                textBox1.Enabled = false;
+            }
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+
+            // 8 mean (backspace)
+
+
+            if (!char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
