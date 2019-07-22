@@ -89,9 +89,9 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Enabled = false;
-            this.groupBox2.Location = new System.Drawing.Point(547, 136);
+            this.groupBox2.Location = new System.Drawing.Point(547, 137);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(704, 618);
+            this.groupBox2.Size = new System.Drawing.Size(815, 618);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
@@ -260,18 +260,20 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(710, 204);
+            this.dataGridView1.Size = new System.Drawing.Size(812, 204);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // DASHBOARDPANEL
             // 
+            this.DASHBOARDPANEL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DASHBOARDPANEL.Controls.Add(this.CATEGORIESBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.pictureBox1);
             this.DASHBOARDPANEL.Controls.Add(this.PRODUCTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.CLIENTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.RECEIPTSBUTTON);
-            this.DASHBOARDPANEL.Location = new System.Drawing.Point(9, 12);
+            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DASHBOARDPANEL.Location = new System.Drawing.Point(29, 14);
             this.DASHBOARDPANEL.Name = "DASHBOARDPANEL";
             this.DASHBOARDPANEL.Size = new System.Drawing.Size(1242, 36);
             this.DASHBOARDPANEL.TabIndex = 30;
@@ -491,7 +493,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1263, 737);
+            this.ClientSize = new System.Drawing.Size(1358, 737);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.radioButton1);

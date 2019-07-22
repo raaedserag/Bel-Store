@@ -77,8 +77,8 @@ namespace Belal.Controller.ادارة_المنتجات
                 textBox7.Enabled = false;
                 textBox2.Enabled = false;
 
-                return;
-               // radioButton1.Enabled = false;
+               
+                // radioButton1.Enabled = false;
                 //radioButton3.Enabled = false;
 
 
@@ -112,10 +112,10 @@ namespace Belal.Controller.ادارة_المنتجات
             {
                 textBox1.Enabled = false;
                 textBox2.Enabled = false;
-                return;
+                
 
-               // radioButton1.Enabled = false;
-               // radioButton2.Enabled = false;
+                radioButton1.Enabled = false;
+                radioButton2.Enabled = false;
             }
             /*
            else if (radioButton2.Checked == true)
@@ -148,9 +148,9 @@ namespace Belal.Controller.ادارة_المنتجات
             {
                 textBox7.Enabled = false;
                 textBox1.Enabled = false;
-                return;
-                //  radioButton2.Enabled = false;
-                // radioButton3.Enabled = false;
+                
+                 radioButton2.Enabled = false;
+                 radioButton3.Enabled = false;
             }
             /*
            else if (radioButton3.Checked == true)

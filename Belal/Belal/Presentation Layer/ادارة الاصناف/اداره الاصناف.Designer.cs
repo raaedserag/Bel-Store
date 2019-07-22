@@ -57,12 +57,14 @@
             // 
             // DASHBOARDPANEL
             // 
+            this.DASHBOARDPANEL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DASHBOARDPANEL.Controls.Add(this.CATEGORIESBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.pictureBox1);
             this.DASHBOARDPANEL.Controls.Add(this.PRODUCTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.CLIENTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.RECEIPTSBUTTON);
-            this.DASHBOARDPANEL.Location = new System.Drawing.Point(4, 1);
+            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DASHBOARDPANEL.Location = new System.Drawing.Point(110, 12);
             this.DASHBOARDPANEL.Name = "DASHBOARDPANEL";
             this.DASHBOARDPANEL.Size = new System.Drawing.Size(942, 36);
             this.DASHBOARDPANEL.TabIndex = 9;
@@ -134,7 +136,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Checked = true;
             this.radioButton2.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.radioButton2.Location = new System.Drawing.Point(702, 91);
+            this.radioButton2.Location = new System.Drawing.Point(1130, 91);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(119, 28);
             this.radioButton2.TabIndex = 12;
@@ -148,7 +150,7 @@
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Location = new System.Drawing.Point(491, 134);
+            this.groupBox1.Location = new System.Drawing.Point(919, 134);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(455, 282);
             this.groupBox1.TabIndex = 13;
@@ -198,14 +200,14 @@
             this.groupBox2.Enabled = false;
             this.groupBox2.Location = new System.Drawing.Point(4, 114);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(481, 402);
+            this.groupBox2.Size = new System.Drawing.Size(895, 531);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(311, 17);
+            this.button3.Location = new System.Drawing.Point(460, 22);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 36);
             this.button3.TabIndex = 17;
@@ -216,7 +218,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(64, 277);
+            this.textBox2.Location = new System.Drawing.Point(259, 370);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(257, 36);
@@ -226,7 +228,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(345, 277);
+            this.label3.Location = new System.Drawing.Point(540, 370);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 23);
             this.label3.TabIndex = 15;
@@ -236,7 +238,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(311, 350);
+            this.button2.Location = new System.Drawing.Point(506, 443);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 36);
             this.button2.TabIndex = 14;
@@ -247,7 +249,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(83, 350);
+            this.button1.Location = new System.Drawing.Point(278, 443);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 36);
             this.button1.TabIndex = 13;
@@ -264,19 +266,19 @@
             this.dataGridView1.CausesValidation = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 59);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 94);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(469, 197);
+            this.dataGridView1.Size = new System.Drawing.Size(883, 197);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(83, 17);
+            this.textBox1.Location = new System.Drawing.Point(232, 22);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(186, 36);
@@ -287,15 +289,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(948, 512);
+            this.ClientSize = new System.Drawing.Size(1358, 679);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.DASHBOARDPANEL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximumSize = new System.Drawing.Size(968, 555);
-            this.MinimumSize = new System.Drawing.Size(968, 43);
+            this.MaximumSize = new System.Drawing.Size(1378, 784);
+            this.MinimumSize = new System.Drawing.Size(1364, 43);
             this.Name = "اداره_الاصناف";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

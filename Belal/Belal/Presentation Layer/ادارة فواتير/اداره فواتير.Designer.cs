@@ -94,14 +94,16 @@
             // 
             // DASHBOARDPANEL
             // 
+            this.DASHBOARDPANEL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DASHBOARDPANEL.Controls.Add(this.CATEGORIESBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.pictureBox1);
             this.DASHBOARDPANEL.Controls.Add(this.PRODUCTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.CLIENTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.RECEIPTSBUTTON);
-            this.DASHBOARDPANEL.Location = new System.Drawing.Point(-1, -1);
+            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DASHBOARDPANEL.Location = new System.Drawing.Point(138, 8);
             this.DASHBOARDPANEL.Name = "DASHBOARDPANEL";
-            this.DASHBOARDPANEL.Size = new System.Drawing.Size(800, 36);
+            this.DASHBOARDPANEL.Size = new System.Drawing.Size(615, 36);
             this.DASHBOARDPANEL.TabIndex = 7;
             // 
             // CATEGORIESBUTTON

@@ -76,14 +76,16 @@
             // 
             // DASHBOARDPANEL
             // 
+            this.DASHBOARDPANEL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DASHBOARDPANEL.Controls.Add(this.CATEGORIESBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.pictureBox1);
             this.DASHBOARDPANEL.Controls.Add(this.PRODUCTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.CLIENTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.RECEIPTSBUTTON);
-            this.DASHBOARDPANEL.Location = new System.Drawing.Point(-2, 2);
+            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DASHBOARDPANEL.Location = new System.Drawing.Point(7, 9);
             this.DASHBOARDPANEL.Name = "DASHBOARDPANEL";
-            this.DASHBOARDPANEL.Size = new System.Drawing.Size(800, 36);
+            this.DASHBOARDPANEL.Size = new System.Drawing.Size(800, 41);
             this.DASHBOARDPANEL.TabIndex = 8;
             // 
             // CATEGORIESBUTTON
@@ -139,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(841, 450);
             this.Controls.Add(this.DASHBOARDPANEL);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

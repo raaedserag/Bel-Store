@@ -43,7 +43,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(472, 170);
+            this.button2.Location = new System.Drawing.Point(610, 170);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(274, 143);
             this.button2.TabIndex = 14;
@@ -54,7 +54,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(51, 170);
+            this.button1.Location = new System.Drawing.Point(93, 170);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(274, 143);
             this.button1.TabIndex = 13;
@@ -64,12 +64,14 @@
             // 
             // DASHBOARDPANEL
             // 
+            this.DASHBOARDPANEL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DASHBOARDPANEL.Controls.Add(this.CATEGORIESBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.pictureBox1);
             this.DASHBOARDPANEL.Controls.Add(this.PRODUCTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.CLIENTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.RECEIPTSBUTTON);
-            this.DASHBOARDPANEL.Location = new System.Drawing.Point(1, 6);
+            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DASHBOARDPANEL.Location = new System.Drawing.Point(106, 27);
             this.DASHBOARDPANEL.Name = "DASHBOARDPANEL";
             this.DASHBOARDPANEL.Size = new System.Drawing.Size(800, 36);
             this.DASHBOARDPANEL.TabIndex = 12;
@@ -126,7 +128,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(948, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.DASHBOARDPANEL);

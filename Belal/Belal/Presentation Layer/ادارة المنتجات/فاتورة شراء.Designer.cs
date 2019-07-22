@@ -133,6 +133,7 @@
             this.button4.TabIndex = 65;
             this.button4.Text = "إضــافــة";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button2
             // 
@@ -146,6 +147,8 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8F);
@@ -163,20 +166,22 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.Location = new System.Drawing.Point(309, 421);
+            this.dataGridView2.Location = new System.Drawing.Point(292, 406);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(1036, 319);
             this.dataGridView2.TabIndex = 63;
             // 
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(933, 355);
+            this.textBox8.Location = new System.Drawing.Point(97, 355);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(186, 33);
             this.textBox8.TabIndex = 62;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // radioButton1
             // 
@@ -189,6 +194,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "الكود";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // textBox2
             // 
@@ -197,6 +203,7 @@
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
+            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox2.Size = new System.Drawing.Size(238, 39);
             this.textBox2.TabIndex = 60;
             // 
@@ -211,6 +218,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "النوع";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // textBox7
             // 
@@ -218,18 +226,20 @@
             this.textBox7.Location = new System.Drawing.Point(478, 65);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
+            this.textBox7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox7.Size = new System.Drawing.Size(238, 39);
             this.textBox7.TabIndex = 58;
             // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(338, 355);
+            this.textBox5.Location = new System.Drawing.Point(314, 355);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(134, 33);
+            this.textBox5.Size = new System.Drawing.Size(158, 33);
             this.textBox5.TabIndex = 53;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox4
             // 
@@ -262,9 +272,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1112, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(1055, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(238, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(10, 36);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -298,7 +308,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(71, 673);
+            this.button5.Location = new System.Drawing.Point(71, 658);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(203, 67);
             this.button5.TabIndex = 66;
@@ -307,14 +317,16 @@
             // 
             // DASHBOARDPANEL
             // 
+            this.DASHBOARDPANEL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DASHBOARDPANEL.Controls.Add(this.CATEGORIESBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.pictureBox1);
             this.DASHBOARDPANEL.Controls.Add(this.PRODUCTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.CLIENTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.RECEIPTSBUTTON);
+            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DASHBOARDPANEL.Location = new System.Drawing.Point(4, 0);
             this.DASHBOARDPANEL.Name = "DASHBOARDPANEL";
-            this.DASHBOARDPANEL.Size = new System.Drawing.Size(1350, 36);
+            this.DASHBOARDPANEL.Size = new System.Drawing.Size(1050, 36);
             this.DASHBOARDPANEL.TabIndex = 57;
             // 
             // radioButton2
@@ -328,6 +340,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "الاسم";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // button3
             // 
@@ -338,11 +351,12 @@
             this.button3.TabIndex = 55;
             this.button3.Text = "بحث بـ";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(152, 355);
+            this.textBox1.Location = new System.Drawing.Point(937, 355);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(156, 33);
@@ -416,7 +430,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(71, 421);
+            this.button1.Location = new System.Drawing.Point(57, 446);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(203, 67);
             this.button1.TabIndex = 45;
@@ -425,6 +439,9 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F);
@@ -442,9 +459,11 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Location = new System.Drawing.Point(107, 146);
+            this.dataGridView1.Location = new System.Drawing.Point(107, 123);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1036, 136);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dataGridView1.Size = new System.Drawing.Size(1036, 178);
             this.dataGridView1.TabIndex = 44;
             // 
             // textBox10
@@ -453,6 +472,7 @@
             this.textBox10.Location = new System.Drawing.Point(816, 65);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
+            this.textBox10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox10.Size = new System.Drawing.Size(238, 39);
             this.textBox10.TabIndex = 43;
             // 
@@ -461,7 +481,7 @@
             this.label9.AutoSize = true;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(203, 319);
+            this.label9.Location = new System.Drawing.Point(154, 319);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label9.Size = new System.Drawing.Size(56, 19);
@@ -474,7 +494,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1358, 812);
+            this.ClientSize = new System.Drawing.Size(1358, 737);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.button4);
@@ -508,6 +528,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "فاتورة_شراء";
             this.Text = "فاتورة_شراء";
+            this.Load += new System.EventHandler(this.فاتورة_شراء_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.DASHBOARDPANEL.ResumeLayout(false);
