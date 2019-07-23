@@ -57,10 +57,10 @@
             this.DASHBOARDPANEL.Controls.Add(this.PRODUCTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.CLIENTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.RECEIPTSBUTTON);
-            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DASHBOARDPANEL.Location = new System.Drawing.Point(61, 6);
             this.DASHBOARDPANEL.Name = "DASHBOARDPANEL";
-            this.DASHBOARDPANEL.Size = new System.Drawing.Size(800, 36);
+            this.DASHBOARDPANEL.Size = new System.Drawing.Size(615, 36);
             this.DASHBOARDPANEL.TabIndex = 13;
             // 
             // CATEGORIESBUTTON
@@ -77,7 +77,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(637, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(10, 36);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -168,10 +168,10 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(225, 471);
+            this.textBox1.Location = new System.Drawing.Point(143, 471);
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox1.Size = new System.Drawing.Size(127, 40);
+            this.textBox1.Size = new System.Drawing.Size(209, 40);
             this.textBox1.TabIndex = 20;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -234,7 +234,9 @@
             this.Name = "دفع_نقدي";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "دفع_نقدي";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.دفع_نقدي_FormClosing);
             this.Load += new System.EventHandler(this.دفع_نقدي_Load);
+            this.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.دفع_نقدي_GiveFeedback);
             this.DASHBOARDPANEL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

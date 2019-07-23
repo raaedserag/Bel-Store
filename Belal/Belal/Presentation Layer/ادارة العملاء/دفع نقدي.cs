@@ -115,5 +115,32 @@ namespace Belal.Presentation_Layer.ادارة_العملاء
             }
 
         }
+
+        private void دفع_نقدي_GiveFeedback(object sender, GiveFeedbackEventArgs e)
+        {
+
+        }
+
+        private void دفع_نقدي_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialog =
+                MessageBox.Show("هل تريد قفل هذه النافذه؟", "اغلاق",
+
+                    MessageBoxButtons.YesNo,
+
+                    MessageBoxIcon.Question,
+
+                    MessageBoxDefaultButton.Button2);
+
+
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialog == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

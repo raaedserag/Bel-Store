@@ -365,5 +365,78 @@ namespace Belal.Controller.ادارة_العملاء
 
 
         }
+
+        private void اداره_العملاء_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            DialogResult dialog =
+                MessageBox.Show("هل تريد قفل هذه النافذه؟", "اغلاق",
+
+                    MessageBoxButtons.YesNo,
+
+                    MessageBoxIcon.Question,
+
+                    MessageBoxDefaultButton.Button2);
+
+
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialog == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+
+            if (!char.IsLetter(c) && c != 8)
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+
+            if (!char.IsDigit(c) && c != 8)
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+
+            if (!char.IsDigit(c) && c != 8)
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+
+            if (!char.IsLetter(c) && c != 8)
+            {
+                e.Handled = true;
+            }
+
+        }
     }
 }

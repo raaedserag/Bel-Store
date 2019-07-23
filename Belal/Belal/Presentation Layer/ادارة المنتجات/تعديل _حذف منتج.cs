@@ -71,7 +71,7 @@ namespace Belal.Controller.ادارة_المنتجات
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
+        {/*
             if (radioButton2.Checked == true)
             {
                 textBox7.Enabled = false;
@@ -84,7 +84,7 @@ namespace Belal.Controller.ادارة_المنتجات
 
             }
 
-            /*
+           
            else if (radioButton3.Checked == true)
             {
                 textBox1.Enabled = false;
@@ -108,6 +108,7 @@ namespace Belal.Controller.ادارة_المنتجات
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            /*
             if (radioButton3.Checked == true)
             {
                 textBox1.Enabled = false;
@@ -144,6 +145,7 @@ namespace Belal.Controller.ادارة_المنتجات
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            /*
             if (radioButton1.Checked == true)
             {
                 textBox7.Enabled = false;
@@ -209,6 +211,42 @@ namespace Belal.Controller.ادارة_المنتجات
 
         private void تعديل__حذف_منتج_Load(object sender, EventArgs e)
         {
+
+
+            if (radioButton2.Checked == true)
+            {
+                textBox7.Enabled = false;
+                textBox2.Enabled = false;
+
+
+                // radioButton1.Enabled = false;
+                //radioButton3.Enabled = false;
+
+
+            }
+
+            
+           else if (radioButton3.Checked == true)
+            {
+                textBox1.Enabled = false;
+                textBox2.Enabled = false;
+                return;
+
+                // radioButton1.Enabled = false;
+                // radioButton2.Enabled = false;
+            }
+            else if (radioButton1.Checked == true)
+            {
+                textBox1.Enabled = false;
+                textBox2.Enabled = false;
+                return;
+
+                // radioButton1.Enabled = false;
+                // radioButton2.Enabled = false;
+            }
+            
+
+
             var newProduct = new CategoriesHelpers().Get_categories();
             comboBox1.DataSource = newProduct;
             comboBox1.DisplayMember = "Name";
@@ -340,6 +378,33 @@ namespace Belal.Controller.ادارة_المنتجات
             {
                 e.Handled = true;
             }
+        }
+
+        private void تعديل__حذف_منتج_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialog =
+                MessageBox.Show("هل تريد قفل هذه النافذه؟", "اغلاق",
+
+                    MessageBoxButtons.YesNo,
+
+                    MessageBoxIcon.Question,
+
+                    MessageBoxDefaultButton.Button2);
+
+
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialog == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

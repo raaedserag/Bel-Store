@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Belal.Controller.ادارة_فواتير;
-using Belal.Controller.ادارة_الاصناف;
+﻿using Belal.Controller.ادارة_الاصناف;
 using Belal.Controller.ادارة_العملاء;
 using Belal.Controller.ادارة_المنتجات;
-using Belal.Presentation_Layer.Mains;
+using Belal.Controller.ادارة_فواتير;
 using Belal.Presentation_Layer.ادارة_العملاء;
+using System;
+using System.Windows.Forms;
 
 
 namespace Belal.Presentation_Layer.Mains
@@ -68,6 +60,28 @@ namespace Belal.Presentation_Layer.Mains
             Form pay = new دفع_نقدي();
             this.Hide();
             pay.Show();
+        }
+
+        private void العملاء_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialog =
+                MessageBox.Show("هل تريد قفل هذه النافذه؟", "اغلاق",
+
+                    MessageBoxButtons.YesNo,
+
+                    MessageBoxIcon.Question,
+
+                    MessageBoxDefaultButton.Button2);
+
+
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialog == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
