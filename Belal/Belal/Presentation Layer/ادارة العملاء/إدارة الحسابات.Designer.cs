@@ -89,7 +89,7 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Enabled = false;
-            this.groupBox2.Location = new System.Drawing.Point(547, 137);
+            this.groupBox2.Location = new System.Drawing.Point(547, 130);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(815, 618);
             this.groupBox2.TabIndex = 20;
@@ -102,9 +102,9 @@
             this.textBox9.Location = new System.Drawing.Point(286, 496);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
-            this.textBox9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox9.Size = new System.Drawing.Size(289, 33);
             this.textBox9.TabIndex = 49;
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged_2);
             // 
             // label10
@@ -135,9 +135,9 @@
             this.textBox5.Location = new System.Drawing.Point(148, 19);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox5.Size = new System.Drawing.Size(289, 33);
             this.textBox5.TabIndex = 43;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button3
             // 
@@ -169,9 +169,9 @@
             this.textBox10.Location = new System.Drawing.Point(286, 442);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
-            this.textBox10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox10.Size = new System.Drawing.Size(289, 33);
             this.textBox10.TabIndex = 39;
+            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox8
             // 
@@ -179,9 +179,9 @@
             this.textBox8.Location = new System.Drawing.Point(286, 387);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
-            this.textBox8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox8.Size = new System.Drawing.Size(289, 33);
             this.textBox8.TabIndex = 37;
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged_1);
             // 
             // textBox7
@@ -190,10 +190,11 @@
             this.textBox7.Location = new System.Drawing.Point(286, 335);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox7.Size = new System.Drawing.Size(289, 33);
             this.textBox7.TabIndex = 36;
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged_1);
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // textBox6
             // 
@@ -201,10 +202,11 @@
             this.textBox6.Location = new System.Drawing.Point(286, 280);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox6.Size = new System.Drawing.Size(289, 33);
             this.textBox6.TabIndex = 35;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged_2);
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // label9
             // 
@@ -272,10 +274,10 @@
             this.DASHBOARDPANEL.Controls.Add(this.PRODUCTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.CLIENTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.RECEIPTSBUTTON);
-            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DASHBOARDPANEL.Location = new System.Drawing.Point(29, 14);
             this.DASHBOARDPANEL.Name = "DASHBOARDPANEL";
-            this.DASHBOARDPANEL.Size = new System.Drawing.Size(1242, 36);
+            this.DASHBOARDPANEL.Size = new System.Drawing.Size(1048, 36);
             this.DASHBOARDPANEL.TabIndex = 30;
             // 
             // CATEGORIESBUTTON
@@ -292,7 +294,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(1080, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(10, 36);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -344,6 +346,7 @@
             this.groupBox1.Size = new System.Drawing.Size(524, 618);
             this.groupBox1.TabIndex = 45;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBox11
             // 
@@ -351,6 +354,7 @@
             this.textBox11.Location = new System.Drawing.Point(30, 359);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
+            this.textBox11.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox11.Size = new System.Drawing.Size(289, 33);
             this.textBox11.TabIndex = 21;
             this.textBox11.Text = "0";
@@ -385,6 +389,7 @@
             this.textBox4.Location = new System.Drawing.Point(30, 295);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
+            this.textBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox4.Size = new System.Drawing.Size(289, 33);
             this.textBox4.TabIndex = 18;
             this.textBox4.Text = "0";
@@ -397,9 +402,10 @@
             this.textBox3.Location = new System.Drawing.Point(30, 209);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox3.Size = new System.Drawing.Size(289, 33);
             this.textBox3.TabIndex = 17;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox2
             // 
@@ -407,9 +413,11 @@
             this.textBox2.Location = new System.Drawing.Point(30, 128);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox2.Size = new System.Drawing.Size(289, 33);
             this.textBox2.TabIndex = 16;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
             // 
@@ -417,9 +425,11 @@
             this.textBox1.Location = new System.Drawing.Point(30, 51);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox1.Size = new System.Drawing.Size(289, 33);
             this.textBox1.TabIndex = 15;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label5
             // 
@@ -502,6 +512,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "اداره_العملاء";
             this.Text = "اداره_العملاء";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.اداره_العملاء_FormClosing);
             this.Load += new System.EventHandler(this.اداره_العملاء_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

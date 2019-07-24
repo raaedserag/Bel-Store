@@ -64,9 +64,9 @@
             this.DASHBOARDPANEL.Controls.Add(this.CLIENTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.RECEIPTSBUTTON);
             this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DASHBOARDPANEL.Location = new System.Drawing.Point(110, 12);
+            this.DASHBOARDPANEL.Location = new System.Drawing.Point(331, 12);
             this.DASHBOARDPANEL.Name = "DASHBOARDPANEL";
-            this.DASHBOARDPANEL.Size = new System.Drawing.Size(942, 36);
+            this.DASHBOARDPANEL.Size = new System.Drawing.Size(721, 36);
             this.DASHBOARDPANEL.TabIndex = 9;
             // 
             // CATEGORIESBUTTON
@@ -83,7 +83,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(739, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(10, 36);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -121,10 +121,10 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.radioButton1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(159, 80);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(136, 28);
+            this.radioButton1.Size = new System.Drawing.Size(180, 33);
             this.radioButton1.TabIndex = 11;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "حذف / تعديل";
@@ -135,10 +135,10 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Checked = true;
-            this.radioButton2.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.radioButton2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.Location = new System.Drawing.Point(1130, 91);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(119, 28);
+            this.radioButton2.Size = new System.Drawing.Size(179, 37);
             this.radioButton2.TabIndex = 12;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "اضافة صنف";
@@ -150,19 +150,19 @@
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Location = new System.Drawing.Point(919, 134);
+            this.groupBox1.Location = new System.Drawing.Point(899, 134);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(455, 282);
+            this.groupBox1.Size = new System.Drawing.Size(459, 282);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(107, 159);
+            this.button4.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(133, 161);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(188, 36);
+            this.button4.Size = new System.Drawing.Size(188, 54);
             this.button4.TabIndex = 18;
             this.button4.Text = "اضافة الصنف";
             this.button4.UseVisualStyleBackColor = true;
@@ -170,23 +170,26 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(278, 76);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(275, 64);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(115, 23);
+            this.label1.Size = new System.Drawing.Size(172, 35);
             this.label1.TabIndex = 17;
             this.label1.Text = "اسم الصنف";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // textBox3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(23, 76);
+            this.textBox3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(37, 64);
+            this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox3.Size = new System.Drawing.Size(186, 27);
+            this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox3.Size = new System.Drawing.Size(241, 35);
             this.textBox3.TabIndex = 16;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // groupBox2
             // 
@@ -198,18 +201,19 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Enabled = false;
-            this.groupBox2.Location = new System.Drawing.Point(4, 114);
+            this.groupBox2.Location = new System.Drawing.Point(4, 113);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(895, 531);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(460, 22);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 36);
+            this.button3.Size = new System.Drawing.Size(129, 36);
             this.button3.TabIndex = 17;
             this.button3.Text = "بحث";
             this.button3.UseVisualStyleBackColor = true;
@@ -221,26 +225,29 @@
             this.textBox2.Location = new System.Drawing.Point(259, 370);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
+            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox2.Size = new System.Drawing.Size(257, 36);
             this.textBox2.TabIndex = 16;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(540, 370);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 23);
+            this.label3.Size = new System.Drawing.Size(143, 36);
             this.label3.TabIndex = 15;
             this.label3.Text = "الاسم";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(506, 443);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 36);
+            this.button2.Size = new System.Drawing.Size(189, 47);
             this.button2.TabIndex = 14;
             this.button2.Text = "حذف";
             this.button2.UseVisualStyleBackColor = true;
@@ -248,10 +255,10 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(278, 443);
+            this.button1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(195, 443);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 36);
+            this.button1.Size = new System.Drawing.Size(190, 47);
             this.button1.TabIndex = 13;
             this.button1.Text = "تعديل";
             this.button1.UseVisualStyleBackColor = true;
@@ -278,11 +285,14 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(232, 22);
+            this.textBox1.Location = new System.Drawing.Point(138, 22);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 36);
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox1.Size = new System.Drawing.Size(280, 36);
             this.textBox1.TabIndex = 11;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // اداره_الاصناف
             // 
@@ -296,12 +306,13 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.DASHBOARDPANEL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.HelpButton = true;
             this.MaximumSize = new System.Drawing.Size(1378, 784);
             this.MinimumSize = new System.Drawing.Size(1364, 43);
             this.Name = "اداره_الاصناف";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "اداره_الاصناف";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.اداره_الاصناف_FormClosing);
             this.Load += new System.EventHandler(this.اداره_الاصناف_Load);
             this.DASHBOARDPANEL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

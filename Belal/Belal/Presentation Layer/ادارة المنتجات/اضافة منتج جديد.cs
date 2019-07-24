@@ -197,5 +197,27 @@ namespace Belal.Controller.ادارة_المنتجات
         {
 
         }
+
+        private void اضافة_منتج_جديد_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialog =
+                MessageBox.Show("هل تريد قفل هذه النافذه؟", "اغلاق",
+
+                    MessageBoxButtons.YesNo,
+
+                    MessageBoxIcon.Question,
+
+                    MessageBoxDefaultButton.Button2);
+
+
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialog == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

@@ -82,10 +82,10 @@
             this.DASHBOARDPANEL.Controls.Add(this.PRODUCTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.CLIENTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.RECEIPTSBUTTON);
-            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DASHBOARDPANEL.Location = new System.Drawing.Point(7, 9);
+            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DASHBOARDPANEL.Location = new System.Drawing.Point(158, 9);
             this.DASHBOARDPANEL.Name = "DASHBOARDPANEL";
-            this.DASHBOARDPANEL.Size = new System.Drawing.Size(800, 41);
+            this.DASHBOARDPANEL.Size = new System.Drawing.Size(589, 41);
             this.DASHBOARDPANEL.TabIndex = 8;
             // 
             // CATEGORIESBUTTON
@@ -102,7 +102,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(637, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(10, 36);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -152,6 +152,7 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اداره_المنتجات";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.اداره_المنتجات_FormClosing);
             this.DASHBOARDPANEL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

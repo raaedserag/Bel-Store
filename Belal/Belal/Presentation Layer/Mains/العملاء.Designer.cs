@@ -43,7 +43,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(610, 170);
+            this.button2.Location = new System.Drawing.Point(596, 148);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(274, 143);
             this.button2.TabIndex = 14;
@@ -54,7 +54,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(93, 170);
+            this.button1.Location = new System.Drawing.Point(144, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(274, 143);
             this.button1.TabIndex = 13;
@@ -70,10 +70,10 @@
             this.DASHBOARDPANEL.Controls.Add(this.PRODUCTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.CLIENTSBUTTON);
             this.DASHBOARDPANEL.Controls.Add(this.RECEIPTSBUTTON);
-            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DASHBOARDPANEL.Location = new System.Drawing.Point(106, 27);
+            this.DASHBOARDPANEL.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DASHBOARDPANEL.Location = new System.Drawing.Point(172, 27);
             this.DASHBOARDPANEL.Name = "DASHBOARDPANEL";
-            this.DASHBOARDPANEL.Size = new System.Drawing.Size(800, 36);
+            this.DASHBOARDPANEL.Size = new System.Drawing.Size(612, 36);
             this.DASHBOARDPANEL.TabIndex = 12;
             // 
             // CATEGORIESBUTTON
@@ -88,19 +88,19 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(637, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(620, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(27, 36);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // PRODUCTSBUTTON
             // 
-            this.PRODUCTSBUTTON.Location = new System.Drawing.Point(474, 0);
+            this.PRODUCTSBUTTON.Location = new System.Drawing.Point(462, -1);
             this.PRODUCTSBUTTON.Name = "PRODUCTSBUTTON";
-            this.PRODUCTSBUTTON.Size = new System.Drawing.Size(140, 36);
+            this.PRODUCTSBUTTON.Size = new System.Drawing.Size(135, 36);
             this.PRODUCTSBUTTON.TabIndex = 6;
-            this.PRODUCTSBUTTON.Text = "المنتحات";
+            this.PRODUCTSBUTTON.Text = "المنتجات";
             this.PRODUCTSBUTTON.UseVisualStyleBackColor = true;
             this.PRODUCTSBUTTON.Click += new System.EventHandler(this.PRODUCTSBUTTON_Click);
             // 
@@ -135,6 +135,7 @@
             this.Controls.Add(this.DASHBOARDPANEL);
             this.Name = "العملاء";
             this.Text = "العملاء";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.العملاء_FormClosing);
             this.DASHBOARDPANEL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

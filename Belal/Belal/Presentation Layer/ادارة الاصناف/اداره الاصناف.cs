@@ -1,13 +1,11 @@
-﻿using Belal.Controller.ادارة_العملاء;
-using Belal.Controller.ادارة_المنتجات;
+﻿using Belal.Controller.ادارة_المنتجات;
 using Belal.Controller.ادارة_فواتير;
 using Belal.Helpers;
 using Belal.Model;
-using System;
-using System.Windows.Forms;
-using System.Data;
-using System.Data.SqlClient;
 using Belal.Presentation_Layer.Mains;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 namespace Belal.Controller.ادارة_الاصناف
 {
@@ -118,11 +116,6 @@ namespace Belal.Controller.ادارة_الاصناف
 
         }
 
-        private void اداره_الاصناف_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             last_search = textBox1.Text;
@@ -182,6 +175,76 @@ namespace Belal.Controller.ادارة_الاصناف
         }
 
         private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+
+            if (!char.IsLetter(c) && c != 8)
+            {
+                e.Handled = true;
+            }
+
+
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+
+            if (!char.IsLetter(c) && c != 8)
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+
+            if (!char.IsLetter(c) && c != 8)
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void اداره_الاصناف_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void اداره_الاصناف_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialog =
+                MessageBox.Show("هل تريد قفل هذه النافذه؟", "اغلاق",
+
+                MessageBoxButtons.YesNo,
+
+                MessageBoxIcon.Question,
+
+                MessageBoxDefaultButton.Button2 );
+
+
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialog == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+           
+
+
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
