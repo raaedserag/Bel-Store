@@ -9,7 +9,7 @@ namespace Belal.Helpers
 {
     class ClientsHelpers
     {
-        public void AddNewClient(Client new_client)
+        public string AddNewClient(Client new_client)
         {
 
             var parms = new List<SqlParameter>();
@@ -29,7 +29,7 @@ namespace Belal.Helpers
             parms.Add(new SqlParameter("@owed", SqlDbType.NVarChar));
             parms[parms.Count - 1].Value = new_client.Owed;
 
-            new DataAccessLayer.DataAccsessLayer().ExecuteProcedure("Add_client", parms.ToArray());
+            return new DataAccessLayer.DataAccsessLayer().EXECUTE("Add_client", parms.ToArray()).Rows[0]["id"].ToString();
             
         }
         public DataTable SearchClients(string search_key)
