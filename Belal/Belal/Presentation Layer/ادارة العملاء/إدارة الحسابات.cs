@@ -447,5 +447,25 @@ namespace Belal.Controller.ادارة_العملاء
             }
 
         }
+
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+
+            if (!char.IsDigit(c) && c != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+
+            if (!char.IsDigit(c) && c != 8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
