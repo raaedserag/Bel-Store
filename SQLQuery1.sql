@@ -1,4 +1,4 @@
-﻿-- Table: Categories
+-- Table: Categories
 CREATE TABLE Categories (
 	id int IDENTITY(1,1) PRIMARY KEY,
 	name nvarchar(100) UNIQUE 
@@ -82,7 +82,7 @@ CREATE TABLE ReturnedReceiptsProducts(
 GO
 CREATE VIEW Products_Categories
 AS
-SELECT p.id, c.name as category, p.name, p.vendor, p.quantity, p.price
+SELECT p.id, c.name as category, p.name, p.vendor, p.quantity, p.price, p.barcode
 FROM Products as p
 LEFT JOIN Categories as c
 ON p.category_id = c.id
@@ -101,7 +101,7 @@ GO
 
 CREATE VIEW Receipts_Products
 AS
-SELECT Products_Categories.category, Products_Categories.name, Products_Categories.vendor, Products_Categories.price, ReceiptsProducts.receipt_id, ReceiptsProducts.quantity 
+SELECT Products_Categories.category, Products_Categories.name, Products_Categories.vendor, Products_Categories.price, ReceiptsProducts.receipt_id, ReceiptsProducts.quantity, Products_Categories.barcode
 FROM ReceiptsProducts
 LEFT JOIN Products_Categories ON ReceiptsProducts.product_id = Products_Categories.id
 GO
@@ -120,7 +120,7 @@ GO
 
 CREATE VIEW ReturnedReceipts_Products
 AS
-SELECT Products_Categories.category, Products_Categories.name, Products_Categories.vendor, Products_Categories.price, ReturnedReceiptsProducts.receipt_id, ReturnedReceiptsProducts.quantity 
+SELECT Products_Categories.category, Products_Categories.name, Products_Categories.vendor, Products_Categories.price, ReturnedReceiptsProducts.receipt_id, ReturnedReceiptsProducts.quantity , Products_Categories.barcode
 FROM ReturnedReceiptsProducts
 LEFT JOIN Products_Categories ON ReturnedReceiptsProducts.product_id = Products_Categories.id
 GO
@@ -268,8 +268,7 @@ GO
 -- Add New Client
 CREATE PROCEDURE Add_client @name nvarchar(100), @phone varchar(15), @address nvarchar(100), @paid float, @owed float
 AS
-INSERT INTO Clients(name, phone, address, paid, owed, balance) VALUES(@name, @phone, @address, @paid, @owed, @paid-@owed);
-SELECT SCOPE_IDENTITY() as id ;
+INSERT INTO Clients(name, phone, address, paid, owed, balance) VALUES(@name, @phone, @address, @paid, @owed, @paid-@owed)
 Go
 
 -- Update Existing Client
@@ -334,23 +333,22 @@ GO
 
 ------------ For Recipts  --------------------------------
 
--- Get Receipt Data
-CREATE PROCEDURE Get_receipt_data @receipt_id int
-AS
-SELECT Receipts_Data.*
-FROM Receipts_Data
-LEFT JOIN Receipts_Products ON Receipts_Data.receipt_id = Receipts_Products.receipt_id
-WHERE Receipts_Data.receipt_id = @receipt_id 
-GO
-
 -- Generate New Receipt
 CREATE PROCEDURE Generate_recipt @client_id int
 AS
 DECLARE @client_balance float 
 SET @client_balance =  (SELECT balance FROM Clients WHERE id = @client_id) 
-INSERT INTO Receipts(client_id, past_balance, receipt_total, paid, new_balance, readable_balance, notes) VALUES(@client_id, @client_balance, 0, 0, 0, '', '')
-DECLARE @r_id int = (SELECT SCOPE_IDENTITY())
-EXEC Get_receipt_data @receipt_id = @r_id
+INSERT INTO Receipts(client_id, past_balance, receipt_total, paid, new_balance, readable_balance, notes) VALUES(@client_id, @client_balance, 0, 0, 0, 'hk', N'معلش')
+SELECT SCOPE_IDENTITY() as id
+GO
+
+-- Get Receipt Data
+CREATE PROCEDURE Get_receipt_data @receipt_id int
+AS
+SELECT * 
+FROM Receipts_Data
+LEFT JOIN Receipts_Products ON Receipts_Data.receipt_id = Receipts_Products.receipt_id
+WHERE Receipts_Data.receipt_id = @receipt_id 
 GO
 
 
@@ -390,28 +388,24 @@ INSERT INTO ReceiptsProducts(product_id, receipt_id, quantity) VALUES (@product_
 GO
 
 ------------ For ReturnedRecipts  --------------------------------
-
-
--- Get Returned Receipt Data
-CREATE PROCEDURE Get_Returnedreceipt_data @receipt_id int
-AS
-SELECT ReturnedReceipts_Data.* 
-FROM ReturnedReceipts_Data
-LEFT JOIN ReturnedReceipts_Products ON ReturnedReceipts_Data.receipt_id = ReturnedReceipts_Products.receipt_id
-WHERE ReturnedReceipts_Data.receipt_id = @receipt_id 
-GO
-
-
 -- Generate New ReturnedReceipt
 CREATE PROCEDURE Generate_Returnedrecipt @client_id int
 AS
 DECLARE @client_balance float 
 SET @client_balance =  (SELECT balance FROM Clients WHERE id = @client_id) 
-INSERT INTO ReturnedReceipts(client_id, past_balance, receipt_total, paid, new_balance, readable_balance, notes) VALUES(@client_id, @client_balance, 0, 0, 0, '', '')
-DECLARE @r_id int = (SELECT SCOPE_IDENTITY())
-EXEC Get_Returnedreceipt_data @receipt_id = @r_id
-
+INSERT INTO ReturnedReceipts(client_id, past_balance, receipt_total, paid, new_balance, readable_balance, notes) VALUES(@client_id, @client_balance, 0, 0, 0, 'hk', N'معلش')
+SELECT SCOPE_IDENTITY() as id
 GO
+
+-- Get Returned Receipt Data
+CREATE PROCEDURE Get_Returnedreceipt_data @receipt_id int
+AS
+SELECT * 
+FROM ReturnedReceipts_Data
+LEFT JOIN ReturnedReceipts_Products ON ReturnedReceipts_Data.receipt_id = ReturnedReceipts_Products.receipt_id
+WHERE ReturnedReceipts_Data.receipt_id = @receipt_id 
+GO
+
 
 
 -- Create The Returned Receipt
@@ -457,19 +451,26 @@ SELECT * FROM ReturnedReceipts WHERE client_id = @client_id
 ORDER BY receipt_date
 GO
 
-/*
+
 -- FILTER Receipts
-CREATE PROCEDURE Receipts_filter @type int, @start_date datetime, @end_date datetime, @product_name nvarchar(100), @product_barcode varchar(50), @client_name nvarchar(100), @receipt_id int
+CREATE PROCEDURE Receipts_filter @type int = 0, @start_date datetime, @end_date datetime, @product_name nvarchar(100), @product_barcode varchar(50), @client_name nvarchar(100), @receipt_id int
 AS
- 
+(SELECT Receipts_Data.receipt_id
+FROM Receipts_Data 
+LEFT JOIN Receipts_Products ON Receipts_Data.receipt_id = Receipts_Products.receipt_id
+WHERE (Receipts_Products.name LIKE '%' + @product_name + '%') and (Receipts_Products.barcode LIKE '%' + @product_barcode + '%') ) as 
 IF @type = 0   
 BEGIN
-SELECT * FROM Receipts_Data    
+SELECT * FROM Receipts_Data
+WHERE (receipt_date >= @start_date) and (receipt_date <= @end_date) and (client_name like @client_name) and (receipt_id = @receipt_id) and () and ()
+ORDER BY receipt_date DESC
 END
+
 IF @type = 1   
 BEGIN
 SELECT * FROM ReturnedReceipts_Data    
 END
+
 ELSE
 BEGIN
 SELECT * FROM Receipts  
@@ -482,7 +483,3 @@ END
 GO
 
 SELECT * FROM Receipts_Data
-*/
-
-
-

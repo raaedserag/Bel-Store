@@ -173,7 +173,8 @@ namespace Belal.Controller.ادارة_العملاء
             if(string.IsNullOrWhiteSpace(textBox1.Text)||
                 string.IsNullOrWhiteSpace(textBox2.Text)
                 || string.IsNullOrWhiteSpace(textBox3.Text)||
-                string.IsNullOrWhiteSpace(textBox4.Text))
+                string.IsNullOrWhiteSpace(textBox4.Text) ||
+                string.IsNullOrWhiteSpace(textBox11.Text))
             {
                 MessageBox.Show("يرجي ادخال البيانات كاملة");
                 return;

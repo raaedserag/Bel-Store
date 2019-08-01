@@ -7,27 +7,31 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using Belal.DataAccessLayer;
+using NumberToWord;
+
 namespace Belal.Helpers
 {
     class ReceiptsHelpers
     {
-        public string Generate_receipt(string client_id)
+
+        
+        public DataRow Generate_receipt(string client_id)
         {
             var parms = new List<SqlParameter>();
             parms.Add(new SqlParameter("@client_id", SqlDbType.Int));
-            parms[parms.Count - 1].Value = client_id;
+            parms[parms.Count - 1].Value = int.Parse(client_id);
 
-            return new DataAccsessLayer().EXECUTE("Generate_recipt", parms.ToArray()).Rows[0]["id"].ToString();
+            return new DataAccsessLayer().EXECUTE("Generate_recipt", parms.ToArray()).Rows[0];
             
         }
 
-        public string Generate_Returned_receipt(string client_id)
+        public DataRow Generate_Returned_receipt(string client_id)
         {
             var parms = new List<SqlParameter>();
             parms.Add(new SqlParameter("@client_id", SqlDbType.Int));
-            parms[parms.Count - 1].Value = client_id;
+            parms[parms.Count - 1].Value = int.Parse(client_id);
 
-            return new DataAccsessLayer().EXECUTE("Generate_Returnedrecipt", parms.ToArray()).Rows[0]["id"].ToString();
+            return new DataAccsessLayer().EXECUTE("Generate_Returnedrecipt", parms.ToArray()).Rows[0];
 
         }
         public void Add_entry(string product_id, string receipt_id, string quantity)
@@ -109,6 +113,20 @@ namespace Belal.Helpers
 
             return new DataAccsessLayer().EXECUTE("Create_Returnedreceipt", parms.ToArray());
 
+        }
+        public string read_balance(string balance)
+        {
+            float result = float.Parse(balance);
+            if ( result >= 0)
+            {
+                return "له " + new ToWord(Convert.ToDecimal(balance), new CurrencyInfo()).ConvertToArabic();
+            }
+            else
+            {
+                
+                return "مدين ب" + new ToWord(Convert.ToDecimal((0-result).ToString()), new CurrencyInfo()).ConvertToArabic();
+            }
+            
         }
     }
 }
