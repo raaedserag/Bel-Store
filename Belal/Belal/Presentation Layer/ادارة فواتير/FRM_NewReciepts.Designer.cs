@@ -287,6 +287,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FRM_NewReciepts";
             this.Text = "FRM_NewReciepts";
+            this.Load += new System.EventHandler(this.FRM_NewReciepts_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -153,6 +153,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اداره_المنتجات";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.اداره_المنتجات_FormClosing);
+            this.Load += new System.EventHandler(this.اداره_المنتجات_Load);
             this.DASHBOARDPANEL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

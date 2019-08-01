@@ -23,26 +23,63 @@ namespace Belal.Controller.الرئسيه
         private void button3_Click(object sender, EventArgs e)
         {
 
+            
+
+
             this.Hide();
-            RECEIPTS.ShowDialog();
+            RECEIPTS.Show();
+
+            /*
+
+            this.Close();
+            RECEIPTS.Show();
+            */
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
-            CLIENTS.ShowDialog();
+            CLIENTS.Show();
+
+            
+
+
+            /*
+
+            this.Close();
+            CLIENTS.Show();
+            */
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+           
+
             this.Hide();
-            CATEGORIES.ShowDialog();
+            CATEGORIES.Show();
+        
+            
+
+            /*
+            this.Close();
+            CATEGORIES.Show();
+
+            */
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
-            PRODUCTS.ShowDialog();
+            PRODUCTS.Show();
+            
+
+            /*
+            this.Close();
+            PRODUCTS.Show();
+            */
+         
         }
 
         private void button5_Click(object sender, EventArgs e)

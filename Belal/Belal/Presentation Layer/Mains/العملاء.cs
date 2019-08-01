@@ -15,50 +15,69 @@ namespace Belal.Presentation_Layer.Mains
         {
             InitializeComponent();
         }
+        
 
         private void CATEGORIESBUTTON_Click(object sender, EventArgs e)
         {
-            Form CATEGORIES = new اداره_الاصناف();
+            //this.Close();
             this.Hide();
+            Form CATEGORIES = new اداره_الاصناف();
+          
             CATEGORIES.Show();
 
         }
 
         private void CLIENTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form CLIENTS = new العملاء();
+
+            //this.Close();
             this.Hide();
+            Form CLIENTS = new العملاء();
+            
             CLIENTS.Show();
 
         }
 
         private void RECEIPTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form RECEIPTS = new اداره_فواتير();
+
+           // this.Close();
             this.Hide();
+
+            Form RECEIPTS = new اداره_فواتير();
+            
             RECEIPTS.Show();
 
         }
 
         private void PRODUCTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form PRODUCTS = new اداره_المنتجات();
+           // this.Close();
+
             this.Hide();
+            Form PRODUCTS = new اداره_المنتجات();
+            
             PRODUCTS.Show();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form manage = new اداره_العملاء();
+            //this.Close();
+
             this.Hide();
+            Form manage = new اداره_العملاء();
+           
             manage.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form pay = new دفع_نقدي();
+
+           // this.Close();
             this.Hide();
+            Form pay = new دفع_نقدي();
+           
             pay.Show();
         }
 
@@ -76,12 +95,17 @@ namespace Belal.Presentation_Layer.Mains
 
             if (dialog == DialogResult.Yes)
             {
-                Application.Exit();
+                Application.ExitThread();
             }
-            else if (dialog == DialogResult.No)
+            else
             {
                 e.Cancel = true;
             }
+        }
+
+        private void العملاء_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

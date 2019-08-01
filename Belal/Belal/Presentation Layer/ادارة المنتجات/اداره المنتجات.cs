@@ -15,52 +15,66 @@ namespace Belal.Controller.ادارة_المنتجات
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form add = new اضافة_منتج_جديد();
             this.Hide();
+
+            Form add = new اضافة_منتج_جديد();
+           
             add.Show();
         }
 
         private void CATEGORIESBUTTON_Click(object sender, EventArgs e)
         {
-            Form CATEGORIES = new اداره_الاصناف();
             this.Hide();
+
+            Form CATEGORIES = new اداره_الاصناف();
+           
             CATEGORIES.Show();
         }
 
         private void CLIENTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form CLIENTS = new العملاء();
             this.Hide();
+
+            Form CLIENTS = new العملاء();
+            
             CLIENTS.Show();
 
         }
 
         private void RECEIPTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form RECEIPTS = new اداره_فواتير();
             this.Hide();
+
+            Form RECEIPTS = new اداره_فواتير();
+          
             RECEIPTS.Show();
         
         }
 
         private void PRODUCTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form PRODUCTS = new اداره_المنتجات();
             this.Hide();
+
+            Form PRODUCTS = new اداره_المنتجات();
+            
             PRODUCTS.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form modify = new تعديل__حذف_منتج();
             this.Hide();
+
+            Form modify = new تعديل__حذف_منتج();
+           
             modify.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form buy = new فاتورة_شراء();
             this.Hide();
+
+            Form buy = new فاتورة_شراء();
+           
             buy.Show();
         }
 
@@ -78,12 +92,17 @@ namespace Belal.Controller.ادارة_المنتجات
 
             if (dialog == DialogResult.Yes)
             {
-                Application.Exit();
+                Application.ExitThread();
             }
-            else if (dialog == DialogResult.No)
+            else 
             {
                 e.Cancel = true;
             }
+        }
+
+        private void اداره_المنتجات_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

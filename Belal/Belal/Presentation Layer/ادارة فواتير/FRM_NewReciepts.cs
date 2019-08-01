@@ -40,5 +40,10 @@ namespace Belal.Controller.Invoice
             this.Hide();
             receipt.Show();
         }
+
+        private void FRM_NewReciepts_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

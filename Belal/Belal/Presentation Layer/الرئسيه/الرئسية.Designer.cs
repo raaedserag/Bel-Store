@@ -44,7 +44,7 @@
             this.button1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(495, 60);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 113);
+            this.button1.Size = new System.Drawing.Size(184, 123);
             this.button1.TabIndex = 0;
             this.button1.Text = "ادراة العملاء";
             this.button1.UseVisualStyleBackColor = false;
@@ -60,7 +60,7 @@
             this.button2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(495, 202);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 113);
+            this.button2.Size = new System.Drawing.Size(184, 123);
             this.button2.TabIndex = 1;
             this.button2.Text = "ادراة المنتجات";
             this.button2.UseVisualStyleBackColor = false;
@@ -76,7 +76,7 @@
             this.button3.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(152, 60);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 113);
+            this.button3.Size = new System.Drawing.Size(184, 123);
             this.button3.TabIndex = 2;
             this.button3.Text = "ادارة الفواتير";
             this.button3.UseVisualStyleBackColor = false;
@@ -92,7 +92,7 @@
             this.button4.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(152, 202);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 113);
+            this.button4.Size = new System.Drawing.Size(184, 123);
             this.button4.TabIndex = 3;
             this.button4.Text = "ادارة الاصناف";
             this.button4.UseVisualStyleBackColor = false;

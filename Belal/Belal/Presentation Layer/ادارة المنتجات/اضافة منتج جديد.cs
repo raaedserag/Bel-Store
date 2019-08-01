@@ -17,6 +17,7 @@ namespace Belal.Controller.ادارة_المنتجات
         }
 
         public DataTable cat;
+
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
@@ -27,87 +28,74 @@ namespace Belal.Controller.ادارة_المنتجات
 
         private void CATEGORIESBUTTON_Click(object sender, EventArgs e)
         {
-            Form CATEGORIES = new اداره_الاصناف();
+
             this.Hide();
+
+            Form CATEGORIES = new اداره_الاصناف();
+            
             CATEGORIES.Show();
-        
+
         }
 
         private void CLIENTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form CLIENTS = new العملاء();
             this.Hide();
+
+            Form CLIENTS = new العملاء();
+            
             CLIENTS.Show();
         }
 
         private void RECEIPTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form RECEIPTS = new اداره_فواتير();
             this.Hide();
+
+            Form RECEIPTS = new اداره_فواتير();
+            
             RECEIPTS.Show();
-        
+
         }
 
         private void PRODUCTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form PRODUCTS = new اداره_المنتجات();
             this.Hide();
+
+            Form PRODUCTS = new اداره_المنتجات();
+           
             PRODUCTS.Show();
-        
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (radioButton1.Checked == true &&
+                string.IsNullOrWhiteSpace(textBox1.Text) ||
+                string.IsNullOrWhiteSpace(textBox3.Text) ||
+                string.IsNullOrWhiteSpace(textBox4.Text) ||
+                string.IsNullOrWhiteSpace(textBox5.Text) ||
+                string.IsNullOrWhiteSpace(textBox6.Text)
+            )
+            {
+                MessageBox.Show("يجب ادخال جميع الحقول");
+            }
 
+            else if (radioButton2.Checked == true &&
 
-            if (radioButton1.Checked == true )
+                     string.IsNullOrWhiteSpace(textBox3.Text) ||
+                     string.IsNullOrWhiteSpace(textBox4.Text) ||
+                     string.IsNullOrWhiteSpace(textBox5.Text) ||
+                     string.IsNullOrWhiteSpace(textBox6.Text))
 
             {
-             
-                if (string.IsNullOrWhiteSpace(textBox1.Text))
-                {
-                    MessageBox.Show("يرجي ادخال الكود");
-                }
-                else
-                {
-                    if (string.IsNullOrWhiteSpace(textBox3.Text) ||
-                        string.IsNullOrWhiteSpace(textBox4.Text) ||
-                        string.IsNullOrWhiteSpace(textBox5.Text) ||
-                        string.IsNullOrWhiteSpace(textBox6.Text) ||
-                        string.IsNullOrWhiteSpace(comboBox1.Text))
-                    {
-                        MessageBox.Show("يرجي عدم ترك حقول فارغة");
-
-                    }
-
-
-
-                }
-                
-
-                
+                MessageBox.Show("يجب ادخال جميع الحقول");
             }
-           
+
+
             else
-            {
 
+        {
 
-
-                if (string.IsNullOrWhiteSpace(textBox3.Text) ||
-                    string.IsNullOrWhiteSpace(textBox4.Text) ||
-                    string.IsNullOrWhiteSpace(textBox5.Text) ||
-                    string.IsNullOrWhiteSpace(textBox6.Text) ||
-                    string.IsNullOrWhiteSpace(comboBox1.Text))
-                {
-                    MessageBox.Show("يرجي عدم ترك حقول فارغة");
-
-                }
-            }
-
-
-            
-
-           var newproduct = new Product
+            var newproduct = new Product
             {
                 Barcode = textBox1.Text,
                 Name = textBox4.Text,
@@ -115,11 +103,11 @@ namespace Belal.Controller.ادارة_المنتجات
                 Price = float.Parse(textBox5.Text),
                 Quntity = int.Parse(textBox6.Text),
                 category_id = int.Parse(cat.Rows[comboBox1.SelectedIndex]["id"].ToString())
-              
+
             };
 
-            
-            
+
+
             new ProductHelper().AddNewProduct(newproduct);
 
             MessageBox.Show(" تم اضافة المنتج   " + textBox4.Text + "  بنجاح ");
@@ -131,9 +119,14 @@ namespace Belal.Controller.ادارة_المنتجات
             textBox5.Clear();
             textBox6.Clear();
             textBox1.Clear();
-    
-    
+
+
         }
+    }
+
+
+
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -212,9 +205,9 @@ namespace Belal.Controller.ادارة_المنتجات
 
             if (dialog == DialogResult.Yes)
             {
-                Application.Exit();
+                Application.ExitThread();
             }
-            else if (dialog == DialogResult.No)
+            else 
             {
                 e.Cancel = true;
             }
