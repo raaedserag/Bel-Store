@@ -40,16 +40,21 @@ namespace Belal.Controller.ادارة_الاصناف
 
         private void CLIENTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form CLIENTS = new العملاء();
             this.Hide();
+
+            Form CLIENTS = new العملاء();
+            
             CLIENTS.Show();
 
         }
 
         private void RECEIPTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form RECEIPTS = new اداره_فواتير();
+
             this.Hide();
+
+            Form RECEIPTS = new اداره_فواتير();
+            
             RECEIPTS.Show();
         
 
@@ -57,8 +62,10 @@ namespace Belal.Controller.ادارة_الاصناف
 
         private void PRODUCTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form PRODUCTS = new اداره_المنتجات();
             this.Hide();
+
+            Form PRODUCTS = new اداره_المنتجات();
+           
             PRODUCTS.Show();
         
         }
@@ -232,9 +239,9 @@ namespace Belal.Controller.ادارة_الاصناف
 
             if (dialog == DialogResult.Yes)
             {
-                Application.Exit();
+                Application.ExitThread();
             }
-            else if (dialog == DialogResult.No)
+            else
             {
                 e.Cancel = true;
             }

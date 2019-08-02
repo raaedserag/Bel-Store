@@ -106,6 +106,7 @@
             this.textBox9.TabIndex = 49;
             this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged_2);
+            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress);
             // 
             // label10
             // 
@@ -172,6 +173,7 @@
             this.textBox10.Size = new System.Drawing.Size(289, 33);
             this.textBox10.TabIndex = 39;
             this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox10_KeyPress);
             // 
             // textBox8
             // 

@@ -40,38 +40,46 @@ namespace Belal.Controller.ادارة_المنتجات
 
         private void CATEGORIESBUTTON_Click(object sender, EventArgs e)
         {
-            Form CATEGORIES = new اداره_الاصناف();
             this.Hide();
+
+            Form CATEGORIES = new اداره_الاصناف();
+           
             CATEGORIES.Show();
         
         }
 
         private void CLIENTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form CLIENTS = new العملاء();
             this.Hide();
+
+            Form CLIENTS = new العملاء();
+           
             CLIENTS.Show();
 
         }
 
         private void RECEIPTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form RECEIPTS = new اداره_فواتير();
             this.Hide();
+
+            Form RECEIPTS = new اداره_فواتير();
+           
             RECEIPTS.Show();
         
         }
 
         private void PRODUCTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form PRODUCTS = new اداره_المنتجات();
             this.Hide();
+
+            Form PRODUCTS = new اداره_المنتجات();
+           
             PRODUCTS.Show();
         
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {/*
+        {
             if (radioButton2.Checked == true)
             {
                 textBox7.Enabled = false;
@@ -84,7 +92,7 @@ namespace Belal.Controller.ادارة_المنتجات
 
             }
 
-           
+            /*
            else if (radioButton3.Checked == true)
             {
                 textBox1.Enabled = false;
@@ -108,7 +116,6 @@ namespace Belal.Controller.ادارة_المنتجات
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            /*
             if (radioButton3.Checked == true)
             {
                 textBox1.Enabled = false;
@@ -145,7 +152,6 @@ namespace Belal.Controller.ادارة_المنتجات
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            /*
             if (radioButton1.Checked == true)
             {
                 textBox7.Enabled = false;
@@ -211,42 +217,6 @@ namespace Belal.Controller.ادارة_المنتجات
 
         private void تعديل__حذف_منتج_Load(object sender, EventArgs e)
         {
-
-
-            if (radioButton2.Checked == true)
-            {
-                textBox7.Enabled = false;
-                textBox2.Enabled = false;
-
-
-                // radioButton1.Enabled = false;
-                //radioButton3.Enabled = false;
-
-
-            }
-
-            
-           else if (radioButton3.Checked == true)
-            {
-                textBox1.Enabled = false;
-                textBox2.Enabled = false;
-                return;
-
-                // radioButton1.Enabled = false;
-                // radioButton2.Enabled = false;
-            }
-            else if (radioButton1.Checked == true)
-            {
-                textBox1.Enabled = false;
-                textBox2.Enabled = false;
-                return;
-
-                // radioButton1.Enabled = false;
-                // radioButton2.Enabled = false;
-            }
-            
-
-
             var newProduct = new CategoriesHelpers().Get_categories();
             comboBox1.DataSource = newProduct;
             comboBox1.DisplayMember = "Name";
@@ -394,9 +364,9 @@ namespace Belal.Controller.ادارة_المنتجات
 
             if (dialog == DialogResult.Yes)
             {
-                Application.Exit();
+                Application.ExitThread();
             }
-            else if (dialog == DialogResult.No)
+            else 
             {
                 e.Cancel = true;
             }

@@ -107,31 +107,39 @@ namespace Belal.Controller.ادارة_العملاء
 
         private void CATEGORIESBUTTON_Click(object sender, EventArgs e)
         {
-            Form CATEGORIES = new اداره_الاصناف();
             this.Hide();
+
+            Form CATEGORIES = new اداره_الاصناف();
+           
             CATEGORIES.Show();
         }
 
         private void CLIENTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form CLIENTS = new العملاء();
             this.Hide();
+
+            Form CLIENTS = new العملاء();
+            
             CLIENTS.Show();
 
         }
 
         private void RECEIPTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form RECEIPTS = new اداره_فواتير();
             this.Hide();
+
+            Form RECEIPTS = new اداره_فواتير();
+            
             RECEIPTS.Show();
         
         }
 
         private void PRODUCTSBUTTON_Click(object sender, EventArgs e)
         {
-            Form PRODUCTS = new اداره_المنتجات();
             this.Hide();
+
+            Form PRODUCTS = new اداره_المنتجات();
+           
             PRODUCTS.Show();
         
         }
@@ -382,9 +390,9 @@ namespace Belal.Controller.ادارة_العملاء
 
             if (dialog == DialogResult.Yes)
             {
-                Application.Exit();
+                Application.ExitThread();
             }
-            else if (dialog == DialogResult.No)
+            else 
             {
                 e.Cancel = true;
             }
@@ -438,6 +446,26 @@ namespace Belal.Controller.ادارة_العملاء
                 e.Handled = true;
             }
 
+        }
+
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+
+            if (!char.IsDigit(c) && c != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+
+            if (!char.IsDigit(c) && c != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

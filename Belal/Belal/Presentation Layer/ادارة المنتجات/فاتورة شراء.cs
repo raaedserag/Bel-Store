@@ -26,15 +26,19 @@ namespace Belal.Controller.ادارة_المنتجات
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form products = new اداره_المنتجات();
             this.Hide();
+
+            Form products = new اداره_المنتجات();
+            
             products.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form products = new اداره_المنتجات();
             this.Hide();
+
+            Form products = new اداره_المنتجات();
+           
             products.Show();
         }
 
@@ -181,9 +185,9 @@ namespace Belal.Controller.ادارة_المنتجات
 
             if (dialog == DialogResult.Yes)
             {
-                Application.Exit();
+                Application.ExitThread();
             }
-            else if (dialog == DialogResult.No)
+            else 
             {
                 e.Cancel = true;
             }

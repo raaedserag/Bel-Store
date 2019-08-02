@@ -362,5 +362,10 @@ namespace Belal.Controller.Invoice
 
             }
         }
+
+        private void FRM_NewReciepts_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

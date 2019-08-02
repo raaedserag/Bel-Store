@@ -379,7 +379,12 @@
             this.Name = "FRM_NewReciepts";
             this.Text = "FRM_NewReciepts";
             this.Load += new System.EventHandler(this.FRM_NewReciepts_Load);
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+=======
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+>>>>>>> c3781ba278c4a407f01bb04a3c7fb0b6f578083e
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
