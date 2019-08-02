@@ -82,7 +82,7 @@ CREATE TABLE ReturnedReceiptsProducts(
 GO
 CREATE VIEW Products_Categories
 AS
-SELECT p.id, c.name as category, p.name, p.vendor, p.quantity, p.price
+SELECT p.id, c.name as category, p.name, p.vendor, p.quantity, p.price, p.barcode
 FROM Products as p
 LEFT JOIN Categories as c
 ON p.category_id = c.id
@@ -198,7 +198,7 @@ GO
 CREATE PROCEDURE Search_products_name @name nvarchar(100)
 AS
 SELECT * 
-FROM Products
+FROM Products_Categories
 WHERE name LIKE '%' + @name + '%'
 GO
 
@@ -206,7 +206,7 @@ GO
 CREATE PROCEDURE Search_products_barcode @barcode varchar(50)
 AS
 SELECT * 
-FROM Products
+FROM Products_Categories
 WHERE barcode = @barcode
 GO
 
@@ -227,6 +227,7 @@ FROM Products
 LEFT JOIN Categories ON Products.category_id = Categories.id
 WHERE Products.vendor LIKE '%' + @vendor + '%'
 GO
+	
 
 -- Push Products
 CREATE PROCEDURE Push_product @product_id int, @pushed_quantity int
@@ -379,6 +380,15 @@ FROM Receipts
 WHERE client_id = @client_id
 GO
 
+-- Get Receipt Products
+CREATE PROCEDURE Get_receipt_products @receipt_id int
+AS
+SELECT Products_Categories.name, Products_Categories.category, Products_Categories.vendor,ReceiptsProducts.quantity, Products_Categories.price, (ReceiptsProducts.quantity * Products_Categories.price) as total_price
+FROM Products_Categories
+RIGHT JOIN ReceiptsProducts ON Products_Categories.id = ReceiptsProducts.product_id
+WHERE ReceiptsProducts.receipt_id = @receipt_id
+GO
+
 
 ------------ For ProductsReceipts  --------------------------------
 
@@ -438,6 +448,16 @@ SELECT ReturnedReceipts.*
 FROM ReturnedReceipts 
 WHERE client_id = @client_id
 GO
+
+-- Get Returned Receipt Products
+CREATE PROCEDURE Get_Returnedreceipt_products @receipt_id int
+AS
+SELECT Products_Categories.name, Products_Categories.category, Products_Categories.vendor,ReturnedReceiptsProducts.quantity, Products_Categories.price, (ReturnedReceiptsProducts.quantity * Products_Categories.price) as total_price
+FROM Products_Categories
+RIGHT JOIN ReturnedReceiptsProducts ON Products_Categories.id = ReturnedReceiptsProducts.product_id
+WHERE ReturnedReceiptsProducts.receipt_id = @receipt_id
+GO
+
 
 
 ------------ For ReturnedProductsReceipts  --------------------------------

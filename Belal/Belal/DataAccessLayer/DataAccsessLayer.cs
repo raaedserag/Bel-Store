@@ -9,24 +9,7 @@ namespace Belal.DataAccessLayer
 {
     public class DataAccsessLayer
     {
-        /*
         
-        public string SqlConnection { get; set; } =
-            String.Format(@"Data Source={0};Initial Catalog={1};Integrated Security=True",
-                Environment.GetEnvironmentVariable("belal_server_database", EnvironmentVariableTarget.User),
-                Environment.GetEnvironmentVariable("belal_name_database", EnvironmentVariableTarget.User));
-            
-
-        public string Server { get; set; } = Environment.GetEnvironmentVariable("belal_server_database", EnvironmentVariableTarget.User);
-
-
-        public string Database { get; set; } = Environment.GetEnvironmentVariable("belal_name_database", EnvironmentVariableTarget.User);
-
-
-
-
-         */
-
 
 
 

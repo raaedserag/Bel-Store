@@ -102,7 +102,7 @@ namespace Belal.Helpers
             parms.Add(new SqlParameter("@client_id", SqlDbType.Int));
             parms[parms.Count - 1].Value = int.Parse(client_id);
 
-            parms.Add(new SqlParameter("@paid", SqlDbType.Float));
+            parms.Add(new SqlParameter("@received", SqlDbType.Float));
             parms[parms.Count - 1].Value = float.Parse(received);
 
             parms.Add(new SqlParameter("@readable_balance", SqlDbType.NVarChar));
@@ -114,6 +114,29 @@ namespace Belal.Helpers
             return new DataAccsessLayer().EXECUTE("Create_Returnedreceipt", parms.ToArray());
 
         }
+
+        public DataTable Get_receipt_products(string receipt_id)
+        {
+            var parms = new List<SqlParameter>();
+
+            parms.Add(new SqlParameter("@receipt_id", SqlDbType.Int));
+            parms[parms.Count - 1].Value = int.Parse(receipt_id);
+
+
+            return new DataAccsessLayer().EXECUTE("Get_receipt_products", parms.ToArray());
+        }
+
+        public DataTable Get_Returnedreceipt_products(string receipt_id)
+        {
+            var parms = new List<SqlParameter>();
+
+            parms.Add(new SqlParameter("@receipt_id", SqlDbType.Int));
+            parms[parms.Count - 1].Value = int.Parse(receipt_id);
+
+
+            return new DataAccsessLayer().EXECUTE("Get_Returnedreceipt_products", parms.ToArray());
+        }
+
         public string read_balance(string balance)
         {
             float result = float.Parse(balance);

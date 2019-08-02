@@ -4,19 +4,31 @@ namespace Belal.Model
 {
     class Receipts
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
+        
+        public string Receipt_date { get; set; }
 
-        public DateTime Receipt_data { get; set; }
+        public string Client_name { get; set; }
 
-        public int Client_id { get; set; }
+        public string Client_address { get; set; }
 
-        public float Past_Balance { get; set; }
+        public string Client_phone { get; set; }
 
-        public float receipt_total { get; set; }
+        public string Receipt_type { get; set; }
 
-        public float Paid { get; set; }
+        public string Pay_type { get; set; }
 
-        public float Newbalance { get; set; }
+        public string Past_Balance { get; set; }
+
+        public string receipt_total { get; set; }
+        
+        public string receipt_dis { get; set; }
+
+        public string receipt_dis_total { get; set; }
+
+        public string Paid { get; set; }
+
+        public string Newbalance { get; set; }
 
         public string Readable_balance { get; set; }
 

@@ -43,47 +43,49 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vendor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.p_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -121,7 +123,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(979, 8);
+            this.groupBox1.Location = new System.Drawing.Point(1374, 8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox1.Size = new System.Drawing.Size(381, 385);
@@ -169,6 +171,7 @@
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(191, 26);
             this.textBox5.TabIndex = 9;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox4
             // 
@@ -178,6 +181,7 @@
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(191, 27);
             this.textBox4.TabIndex = 8;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox3
             // 
@@ -187,6 +191,7 @@
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(191, 27);
             this.textBox3.TabIndex = 7;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
             // 
@@ -196,6 +201,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(191, 28);
             this.textBox2.TabIndex = 6;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox1
             // 
@@ -205,6 +211,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(191, 30);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -236,38 +243,47 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.textBox10);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.textBox9);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(979, 402);
+            this.groupBox2.Location = new System.Drawing.Point(1374, 402);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox2.Size = new System.Drawing.Size(381, 342);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "الفاتورة";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(206, 103);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(169, 23);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "مستلم من العميل";
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(6, 257);
+            this.textBox10.Location = new System.Drawing.Point(22, 241);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(191, 79);
+            this.textBox10.Size = new System.Drawing.Size(331, 79);
             this.textBox10.TabIndex = 20;
+            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(212, 257);
+            this.label10.Location = new System.Drawing.Point(138, 206);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(142, 23);
             this.label10.TabIndex = 19;
@@ -275,17 +291,19 @@
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(6, 206);
+            this.textBox9.Location = new System.Drawing.Point(6, 153);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(191, 31);
             this.textBox9.TabIndex = 18;
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(223, 206);
+            this.label9.Location = new System.Drawing.Point(241, 153);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(134, 23);
             this.label9.TabIndex = 17;
@@ -293,37 +311,15 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(6, 156);
+            this.textBox8.Location = new System.Drawing.Point(6, 103);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(191, 30);
             this.textBox8.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(206, 163);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(169, 23);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "مستلم من العميل";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(6, 99);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(191, 37);
-            this.textBox7.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(223, 99);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(148, 23);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "اجمالي الفاتورة";
+            this.textBox8.Text = "0";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // textBox6
             // 
@@ -333,11 +329,13 @@
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(191, 32);
             this.textBox6.TabIndex = 12;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(228, 47);
+            this.label6.Location = new System.Drawing.Point(235, 47);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 23);
             this.label6.TabIndex = 11;
@@ -346,202 +344,178 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBox3.Controls.Add(this.textBox18);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.textBox17);
-            this.groupBox3.Controls.Add(this.textBox16);
-            this.groupBox3.Controls.Add(this.textBox15);
-            this.groupBox3.Controls.Add(this.textBox14);
-            this.groupBox3.Controls.Add(this.textBox13);
-            this.groupBox3.Controls.Add(this.textBox12);
-            this.groupBox3.Controls.Add(this.textBox11);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.textBox12);
             this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.textBox11);
             this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.button8);
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(12, 12);
+            this.groupBox3.Location = new System.Drawing.Point(407, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(946, 526);
+            this.groupBox3.Size = new System.Drawing.Size(946, 547);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "المنتج";
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Goldenrod;
-            this.button3.Location = new System.Drawing.Point(6, 483);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(484, 34);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "حفظ الفاتورة";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(880, 155);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 322);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "اضافة";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // textBox17
-            // 
-            this.textBox17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(802, 68);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(128, 23);
-            this.textBox17.TabIndex = 14;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(680, 68);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(111, 23);
-            this.textBox16.TabIndex = 13;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(596, 68);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(70, 23);
-            this.textBox15.TabIndex = 12;
-            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
-            // 
-            // textBox14
-            // 
-            this.textBox14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(476, 68);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(111, 23);
-            this.textBox14.TabIndex = 11;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(340, 68);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(121, 23);
-            this.textBox13.TabIndex = 10;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(213, 68);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(110, 23);
-            this.textBox12.TabIndex = 9;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(6, 68);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(42, 23);
-            this.textBox11.TabIndex = 8;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(812, 38);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(96, 16);
-            this.label17.TabIndex = 7;
-            this.label17.Text = "اجمالي السعر";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(715, 38);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 16);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "السعر";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(609, 38);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(47, 16);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "الكمية";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(516, 38);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 16);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "النوع";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(358, 38);
+            this.label13.Location = new System.Drawing.Point(598, 480);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 16);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "اسم الصنف";
+            this.label13.Size = new System.Drawing.Size(33, 23);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "%";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(524, 414);
+            this.textBox12.Multiline = true;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(191, 37);
+            this.textBox12.TabIndex = 23;
+            this.textBox12.Text = "0";
+            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
+            this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox12_KeyPress);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(229, 38);
+            this.label12.Location = new System.Drawing.Point(740, 417);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 16);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "رقم الصنف";
+            this.label12.Size = new System.Drawing.Size(189, 23);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "الاجمالي بعد الخصم";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(637, 477);
+            this.textBox11.Multiline = true;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(78, 37);
+            this.textBox11.TabIndex = 21;
+            this.textBox11.Text = "0";
+            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
+            this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox11_KeyPress);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(17, 38);
+            this.label11.Location = new System.Drawing.Point(740, 480);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(17, 16);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "م";
+            this.label11.Size = new System.Drawing.Size(69, 23);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "الخصم";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(18, 414);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(191, 37);
+            this.textBox7.TabIndex = 19;
+            this.textBox7.Text = "0";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(249, 417);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(148, 23);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "اجمالي الفاتورة";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Goldenrod;
+            this.button8.Location = new System.Drawing.Point(180, 29);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(484, 36);
+            this.button8.TabIndex = 17;
+            this.button8.Text = "اضافة";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 155);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.category,
+            this.vendor,
+            this.name,
+            this.quantity,
+            this.price,
+            this.total});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 76);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.ReadOnly = true;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(884, 322);
+            this.dataGridView1.Size = new System.Drawing.Size(946, 305);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "الرقم التعريفي";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // category
+            // 
+            this.category.HeaderText = "النوع";
+            this.category.Name = "category";
+            this.category.ReadOnly = true;
+            // 
+            // vendor
+            // 
+            this.vendor.HeaderText = "الماركة";
+            this.vendor.Name = "vendor";
+            this.vendor.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "الاسم";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            this.quantity.HeaderText = "الكمية";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.HeaderText = "سعر الوحدة";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
+            // total
+            // 
+            this.total.HeaderText = "السعر الاجمالي";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 565);
+            this.richTextBox1.Location = new System.Drawing.Point(407, 565);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.richTextBox1.Size = new System.Drawing.Size(791, 66);
@@ -553,7 +527,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(818, 585);
+            this.label18.Location = new System.Drawing.Point(1213, 585);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(128, 33);
             this.label18.TabIndex = 12;
@@ -561,7 +535,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(16, 659);
+            this.button4.Location = new System.Drawing.Point(407, 666);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(167, 63);
             this.button4.TabIndex = 13;
@@ -571,68 +545,109 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(225, 659);
+            this.button5.Location = new System.Drawing.Point(616, 666);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(167, 63);
             this.button5.TabIndex = 14;
             this.button5.Text = "تسجيل فقط";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(432, 659);
+            this.button6.Location = new System.Drawing.Point(823, 666);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(167, 63);
             this.button6.TabIndex = 15;
             this.button6.Text = "تسجيل و طباعة";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // groupBox4
             // 
-            this.button7.Location = new System.Drawing.Point(636, 659);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(167, 63);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "عرض";
-            this.button7.UseVisualStyleBackColor = true;
+            this.groupBox4.Controls.Add(this.dataGridView2);
+            this.groupBox4.Controls.Add(this.textBox13);
+            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(12, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox4.Size = new System.Drawing.Size(389, 274);
+            this.groupBox4.TabIndex = 17;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "استعلام عن منتج";
             // 
-            // button8
+            // dataGridView2
             // 
-            this.button8.BackColor = System.Drawing.Color.Goldenrod;
-            this.button8.Location = new System.Drawing.Point(182, 113);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(484, 36);
-            this.button8.TabIndex = 17;
-            this.button8.Text = "بحث";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToResizeColumns = false;
+            this.dataGridView2.AllowUserToResizeRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.p_name,
+            this.p_price});
+            this.dataGridView2.Location = new System.Drawing.Point(0, 120);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(389, 154);
+            this.dataGridView2.TabIndex = 2;
             // 
-            // label20
+            // p_name
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(80, 38);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(98, 16);
-            this.label20.TabIndex = 18;
-            this.label20.Text = "الرقم التعريفي";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
+            this.p_name.FillWeight = 139.0863F;
+            this.p_name.HeaderText = "الاسم";
+            this.p_name.Name = "p_name";
+            this.p_name.ReadOnly = true;
             // 
-            // textBox18
+            // p_price
             // 
-            this.textBox18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(80, 68);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(110, 23);
-            this.textBox18.TabIndex = 19;
+            this.p_price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.p_price.FillWeight = 60.9137F;
+            this.p_price.HeaderText = "السعر";
+            this.p_price.Name = "p_price";
+            this.p_price.ReadOnly = true;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(26, 54);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(198, 30);
+            this.textBox13.TabIndex = 1;
+            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(230, 54);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 30);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "بحث";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1031, 666);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(167, 63);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "فاتورة جديدة";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // FRM_Receipts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
-            this.Controls.Add(this.button7);
+            this.ClientSize = new System.Drawing.Size(1776, 741);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -652,6 +667,9 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -677,29 +695,10 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
@@ -707,9 +706,28 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vendor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p_price;
     }
 }
