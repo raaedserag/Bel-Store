@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Belal.Helpers;
+using Belal.Model;
+using System;
 using System.Data;
 using System.Windows.Forms;
-using Belal.Helpers;
-using Belal.Model;
 
 namespace Belal.Controller.Invoice
 {

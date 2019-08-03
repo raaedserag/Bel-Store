@@ -365,14 +365,16 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(598, 480);
+            this.label13.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(589, 480);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(33, 23);
+            this.label13.Size = new System.Drawing.Size(42, 29);
             this.label13.TabIndex = 24;
             this.label13.Text = "%";
             // 
             // textBox12
             // 
+            this.textBox12.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.Location = new System.Drawing.Point(524, 414);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
@@ -394,6 +396,7 @@
             // 
             // textBox11
             // 
+            this.textBox11.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.Location = new System.Drawing.Point(637, 477);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
@@ -415,6 +418,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(18, 414);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
@@ -438,9 +442,10 @@
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.Goldenrod;
+            this.button8.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(180, 29);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(484, 36);
+            this.button8.Size = new System.Drawing.Size(484, 41);
             this.button8.TabIndex = 17;
             this.button8.Text = "اضافة";
             this.button8.UseVisualStyleBackColor = false;
@@ -515,6 +520,7 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(407, 565);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -535,9 +541,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(407, 666);
+            this.button4.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(397, 655);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(167, 63);
+            this.button4.Size = new System.Drawing.Size(177, 63);
             this.button4.TabIndex = 13;
             this.button4.Text = "رجوع";
             this.button4.UseVisualStyleBackColor = true;
@@ -545,9 +552,10 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(616, 666);
+            this.button5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(606, 655);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(167, 63);
+            this.button5.Size = new System.Drawing.Size(177, 63);
             this.button5.TabIndex = 14;
             this.button5.Text = "تسجيل فقط";
             this.button5.UseVisualStyleBackColor = true;
@@ -555,9 +563,10 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(823, 666);
+            this.button6.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(813, 655);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(167, 63);
+            this.button6.Size = new System.Drawing.Size(177, 63);
             this.button6.TabIndex = 15;
             this.button6.Text = "تسجيل و طباعة";
             this.button6.UseVisualStyleBackColor = true;
@@ -572,7 +581,7 @@
             this.groupBox4.Location = new System.Drawing.Point(12, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox4.Size = new System.Drawing.Size(389, 274);
+            this.groupBox4.Size = new System.Drawing.Size(389, 440);
             this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "استعلام عن منتج";
@@ -593,7 +602,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(389, 154);
+            this.dataGridView2.Size = new System.Drawing.Size(389, 320);
             this.dataGridView2.TabIndex = 2;
             // 
             // p_name
@@ -632,9 +641,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1031, 666);
+            this.button3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(1021, 655);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(167, 63);
+            this.button3.Size = new System.Drawing.Size(177, 63);
             this.button3.TabIndex = 18;
             this.button3.Text = "فاتورة جديدة";
             this.button3.UseVisualStyleBackColor = true;
@@ -645,7 +655,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1776, 741);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.button6);

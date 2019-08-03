@@ -41,5 +41,10 @@ namespace Belal.Controller
             this.Hide();
             show.Show();
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -48,11 +48,13 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(281, 60);
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(225, 60);
             this.textBox1.MaxLength = 20;
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox1.Size = new System.Drawing.Size(177, 21);
+            this.textBox1.Size = new System.Drawing.Size(233, 35);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -62,6 +64,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
@@ -72,7 +75,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(406, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(588, 202);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -131,7 +134,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(719, 205);
+            this.label4.Location = new System.Drawing.Point(915, 205);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(65, 23);
@@ -144,7 +147,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(647, 277);
+            this.label5.Location = new System.Drawing.Point(859, 277);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(137, 23);
@@ -157,7 +160,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(634, 387);
+            this.label6.Location = new System.Drawing.Point(843, 387);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label6.Size = new System.Drawing.Size(150, 23);
@@ -168,11 +171,13 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(531, 387);
+            this.textBox2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(670, 387);
             this.textBox2.MaxLength = 4;
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox2.Size = new System.Drawing.Size(69, 21);
+            this.textBox2.Size = new System.Drawing.Size(148, 36);
             this.textBox2.TabIndex = 8;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -181,20 +186,20 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(490, 60);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 20);
+            this.button1.Size = new System.Drawing.Size(131, 35);
             this.button1.TabIndex = 9;
             this.button1.Text = "بحث";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(316, 378);
+            this.button2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(307, 378);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 32);
+            this.button2.Size = new System.Drawing.Size(137, 45);
             this.button2.TabIndex = 10;
             this.button2.Text = "ادراج";
             this.button2.UseVisualStyleBackColor = true;
@@ -202,10 +207,10 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(94, 378);
+            this.button3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(85, 378);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 32);
+            this.button3.Size = new System.Drawing.Size(145, 45);
             this.button3.TabIndex = 11;
             this.button3.Text = "رجوع";
             this.button3.UseVisualStyleBackColor = true;
@@ -215,7 +220,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(1034, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -230,7 +236,6 @@
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "اختيار_صنف";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "ادراج صنف";
             this.Load += new System.EventHandler(this.اختيار_صنف_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
